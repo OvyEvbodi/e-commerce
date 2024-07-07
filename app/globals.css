@@ -7,7 +7,9 @@
   --background: #fff;
   --grey-text: #4D4D4D;
   --white: #fff;
+  --off-white: #FEFAFB ;
   --orange: #BF5428;
+  --green: #2E5761;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -48,6 +50,39 @@ body {
   background-color: var(--orange);
   color: var(--white);
 }
+.product_card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 70px;
+  height: 70px;
+  border-left: 3px solid var(--green);
+  border-top: 3px solid var(--green);
+
+  border-radius: 4px;
+  background-color: var(--off-white);
+  z-index: 5;
+  transform: translate(0.5%, -168%);
+}
+
+@media screen and (min-width: 750px ){
+  .product_card::after {
+    transform: translate(1%, -167%);
+  }
+}
+@media screen and (min-width: 760px ){
+  .product_card::after {
+    transform: translate(1%, -190%);
+  }
+}
+@media screen and (min-width: 1024px ){
+  .product_card::after {
+    transform: translate(1%, -238%);
+  }
+}
+
+
 
 .hero_vector {
   width: 95.2px;

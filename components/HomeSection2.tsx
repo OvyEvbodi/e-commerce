@@ -5,7 +5,7 @@ import BigCard from "@/components/BigCard";
 const HomeSection = () => {
 
   return (
-    <section id="home_section" className="mt-4 p-2 lg:p-4 lg:px-12 w-full min-h-[100vh] flex gap-4 lg:gap-1 flex-wrap justify-center lg:justify-between">
+    <section id="home_section" className="mt-4 p-2 lg:p-4 lg:px-12 w-full min-h-[100vh] flex gap-4 lg:gap-8 flex-wrap justify-center ">
       {
         big_cards.map(item => (
           <div className={item.label == "FINELY Modern Rustic" ?
