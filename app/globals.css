@@ -31,7 +31,7 @@ body {
   background-repeat: no-repeat;
 }
 .hero_img {
-  background-image: url("../public/chair_bg.png");
+  background-image: url("../public/bg_mask.png");
   background-size:contain;
   background-position: center;
   background-repeat: no-repeat;
