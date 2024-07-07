@@ -1,0 +1,89 @@
+{
+  "big_cards": [
+    {
+      "id": 1,
+      "title": "Nordic dining chairs kitchen backrest stool INS",
+      "description": "Sloid Wood leg, Plastic with Padded Seat Height 41cm Seat Depth 43cm Seat Width 48",
+      "image": "/chair_img_1.png",
+      "label": "Nordic dining chairs"
+    },
+    {
+      "id": 2,
+      "title": "FINELY Modern Rustic Solid Pine Wood Dining Table",
+      "description": "This beautiful finely dining table combines the style of both modern classic and rustic furniture",
+      "image": "/chair_img_2.png",
+      "label": "FINELY Modern Rustic"
+    },
+    {
+      "id": 3,
+      "title": "Living Room Furniture Sold Wood Coffee Table",
+      "description": "crafted with precision and care, this stunning piece ot furniture seamlessly blend functionality",
+      "image": "/chair_img_3.png",
+      "label": "Living Room Furniture"
+    }
+  ],
+  "category_cards": [
+    {
+      "id": 1,
+      "title": "Sofa and Sectionals",
+      "description": "Discover 120 Products",
+      "image": "/sofa.png",
+      "label": "Sofa"
+    },
+    {
+      "id": 2,
+      "title": "Dining Tables",
+      "description": "Discover 100 Products",
+      "image": "/dining.png",
+      "label": "Dining Table"
+    },
+    {
+      "id": 3,
+      "title": "Arm Chairs",
+      "description": "Discover 50 Products",
+      "image": "/arm_chair.png",
+      "label": "Arm Chairs"
+    },
+    {
+      "id": 4,
+      "title": "Side Tables",
+      "description": "Discover 150 Products",
+      "image": "/side_tables.png",
+      "label": "Side Tables"
+    },
+    {
+      "id": 5,
+      "title": "Accessories & Decor",
+      "description": "Discover 150 Products",
+      "image": "/decor.png",
+      "label": "Arm Chairs"
+    }
+  ],
+  "stats": [
+    {
+      "id": 1,
+      "number": 950,
+      "symbol": "+",
+      "text": "items that we’ve developed and  brought to market"
+    },
+    {
+      "id": 2,
+      "number": 25,
+      "symbol": "k",
+      "text": "Satisfied and loyal customers choose to purchase our products."
+    },
+    {
+      "id": 3,
+      "number": 97,
+      "symbol": "%",
+      "text": "Customers who have made a purchase are likely to return."
+    },
+    {
+      "id": 4,
+      "number": 20,
+      "symbol": "+",
+      "text": "We have our store opens at different states in the country."
+    }
+  ]
+}
+

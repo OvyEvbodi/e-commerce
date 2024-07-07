@@ -11,6 +11,10 @@ const config: Config = {
       colors: {
         'off-white': '#FEFAFB',
         'grey-text': '#4D4D4D',
+        'green': '#2E5761',
+        'orange': '#BF5428',
+        'grey-bg': '#EAEEEF',
+        'light-green': '#FDFDFD',
       },
     },
   },

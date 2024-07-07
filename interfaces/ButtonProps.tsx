@@ -7,4 +7,5 @@ export default interface ButtonProps {
     text: string;
     onClick?: MouseEventHandler<HTMLButtonElement>;
     disabled?: boolean;
+    flag?: string;
 }

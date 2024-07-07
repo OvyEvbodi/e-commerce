@@ -1,7 +1,7 @@
 // nav
 const Nav = () => {
   return (
-    <nav className="bg-blue-400 w-full  lg:h-[14vh]">
+    <nav className="bg-white w-full  lg:h-[14vh]">
       {/* smaller components here */} 
     </nav>
   )
