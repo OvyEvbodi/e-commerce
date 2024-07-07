@@ -22,7 +22,7 @@
       "label": "Living Room Furniture"
     }
   ],
-  "product_cards": [
+  "trending_cards": [
     {
       "id": 1,
       "title": "Nordic dining chairs ",
@@ -72,6 +72,144 @@
       "price": 650
     }
   ],
+  "product_cards": [
+    {
+      "id": 1,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage1.png",
+      "label": "Nordic dining chairs",
+      "price": 140
+    },
+    {
+      "id": 2,
+      "title": "Wood Dining Table",
+      "description": "",
+      "image": "/productImage2.png",
+      "label": "FINELY Modern Rustic",
+      "price": 100
+    },
+    {
+      "id": 3,
+      "title": "Living Room Furniture",
+      "description": "",
+      "image": "/productImage3.png",
+      "label": "Living Room Furniture",
+      "price": 230
+    },
+    {
+      "id": 4,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage4.png",
+      "label": "Nordic dining chairs",
+      "price": 165
+    },
+    {
+      "id": 5,
+      "title": "Wood Dining Table",
+      "description": "",
+      "image": "/productImage5.png",
+      "label": "FINELY Modern Rustic",
+      "price": 310
+    },
+    {
+      "id": 6,
+      "title": "Living Room Furniture",
+      "description": "",
+      "image": "/productImage6.png",
+      "label": "Living Room Furniture",
+      "price": 650
+    },
+    {
+      "id": 7,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage7.png",
+      "label": "Nordic dining chairs",
+      "price": 140
+    },
+    {
+      "id": 8,
+      "title": "Wood Dining Table",
+      "description": "",
+      "image": "/productImage8.png",
+      "label": "FINELY Modern Rustic",
+      "price": 100
+    },
+    {
+      "id": 9,
+      "title": "Living Room Furniture",
+      "description": "",
+      "image": "/productImage9.png",
+      "label": "Living Room Furniture",
+      "price": 230
+    },
+    {
+      "id": 10,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage10.png",
+      "label": "Nordic dining chairs",
+      "price": 165
+    },
+    {
+      "id": 11,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage11.png",
+      "label": "Nordic dining chairs",
+      "price": 140
+    },
+    {
+      "id": 12,
+      "title": "Wood Dining Table",
+      "description": "",
+      "image": "/productImage12.png",
+      "label": "FINELY Modern Rustic",
+      "price": 100
+    },
+    {
+      "id": 13,
+      "title": "Living Room Furniture",
+      "description": "",
+      "image": "/productImage13.png",
+      "label": "Living Room Furniture",
+      "price": 230
+    },
+    {
+      "id": 14,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage14.png",
+      "label": "Nordic dining chairs",
+      "price": 165
+    },
+    {
+      "id": 16,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage16.png",
+      "label": "Nordic dining chairs",
+      "price": 140
+    },
+    {
+      "id": 17,
+      "title": "Wood Dining Table",
+      "description": "",
+      "image": "/productImage17.png",
+      "label": "FINELY Modern Rustic",
+      "price": 100
+    },
+    {
+      "id": 18,
+      "title": "Living Room Furniture",
+      "description": "",
+      "image": "/productImage18.png",
+      "label": "Living Room Furniture",
+      "price": 230
+    }
+  ],
   "category_cards": [
     {
       "id": 1,
@@ -112,25 +250,25 @@
   "stats": [
     {
       "id": 1,
-      "number": 950,
+      "number": "950",
       "symbol": "+",
       "text": "items that we’ve developed and  brought to market"
     },
     {
       "id": 2,
-      "number": 25,
-      "symbol": "k",
+      "number": "25K",
+      "symbol": "+",
       "text": "Satisfied and loyal customers choose to purchase our products."
     },
     {
       "id": 3,
-      "number": 97,
+      "number": "97",
       "symbol": "%",
       "text": "Customers who have made a purchase are likely to return."
     },
     {
       "id": 4,
-      "number": 20,
+      "number": "20",
       "symbol": "+",
       "text": "We have our store opens at different states in the country."
     }

@@ -5,7 +5,7 @@ import StatsCard from "@/components/StatsCard";
 const Stats = () => {
   return (
     <div id="stats" className="bg-off-white px-6 py-6 lg:px-12 w-full lg:min-h-[36vh]">
-      <h3 className="text-center p-2 uppercase font-[500]">Let our statistic speak for itself </h3>
+      <h3 className="text-center p-2 uppercase font-[500]">Let our statistic speak for itself</h3>
       <div className="flex flex-wrap gap-4 w-full min-h-[24vh] justify-evenly">
         {
           stats.map(item => (

@@ -1,8 +1,8 @@
 // Trending
 
 import SmallButton from "@/components/SmallButton";
-import {product_cards} from "@/api/data.json";
-import ProductCard from "@/components/productCard";
+import {trending_cards} from "@/api/data.json";
+import TrendingCard from "@/components/TrendingCard";
 
 const Trending = () => {
   return (
@@ -13,9 +13,9 @@ const Trending = () => {
       </div>
       <div className="min-h-[80vh] p-4 lg:py-6 lg:px-12 flex flex-wrap justify-evenly items-stretch gap-4 lg:gap-6">
         {
-          product_cards.map(item => (
+          trending_cards.map(item => (
             <div key={item.id}>
-              <ProductCard { ...item }/>
+              <TrendingCard { ...item }/>
             </div>
           ))
         }

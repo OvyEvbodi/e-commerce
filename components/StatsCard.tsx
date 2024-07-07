@@ -7,7 +7,7 @@ const StatsCard: NextPage<StatsCardProps> = ({ number, symbol, text }) => {
     <div className=" flex flex-col wrap justify-center items-center md:w-[280px]">
       <div className="flex items-start">
         <p className="text-[4rem] font-bold">{number}</p>
-        <p className="text-[1rem]">{symbol}</p>
+        <span className="stats_symbol text-[1.2rem]">{symbol}</span>
       </div>
       <p className="text-center leading-6 font-normal">{text}</p>
     </div>

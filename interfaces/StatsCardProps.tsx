@@ -2,7 +2,7 @@
 
 export default interface StatsCardProps {
   id?: number;
-  number: number;
+  number: string;
   symbol: string;
   text: string;
 }
