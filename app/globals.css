@@ -24,6 +24,13 @@ body {
   color: rgb(var(--foreground-rgb));
   color: var(--grey-text);
 }
+.input_search::before {
+  content: '';
+  width:15px;
+  height:15px;
+  background-color: var(--green);
+  transform: translate(100%);
+}
 .hero {
   background-image: url("../public/hero_bg_img.png");
   background-size:cover;

@@ -17,7 +17,7 @@ const ProductCard: NextPage<BigCardProps> = ({title, image, label, price}) => {
           <span className="font-bold text-[1.4rem]">${price}</span>
           <span className="text-[0.7rem] line-through">${price}</span>
         </div>
-        <SmallButton text='Shop now' />
+        <SmallButton text='Add to cart' />
       </div>
     </div>
   )
