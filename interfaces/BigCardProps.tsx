@@ -6,4 +6,5 @@ export default interface BigCardProps{
   description: string;
   image: string;
   label: string;
+  price?: number;
 }
