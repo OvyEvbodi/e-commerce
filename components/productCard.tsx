@@ -11,9 +11,12 @@ const ProductCard: NextPage<BigCardProps> = ({title, image, label, price}) => {
         <Image src={image} width={350} height={600} alt={label} />
         {/* <img src={image} className="h-full w-full"/> */}
       </div>
-      <div className="p-2 md:p-4 text-left w-full lg:min-h-[20vh]">
+      <div className="p-2 md:p-4 text-left]">
         <h5 className="text-[1.05rem] text-grey-text leading-8">{title}</h5>
-        <p className="font-bold text-[1.4rem]">${price}<span className="text-[0.7rem] -translate-y-6 line-through">${price}</span></p>
+        <div className="flex">
+          <span className="font-bold text-[1.4rem]">${price}</span>
+          <span className="text-[0.7rem] line-through">${price}</span>
+        </div>
         <SmallButton text='Shop now' />
       </div>
     </div>
