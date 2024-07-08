@@ -33,7 +33,7 @@ const Cart = () => {
             }
           </div>
         </div>
-        <div className="text-[1.3rem] font-bold lg:h-[50vh] lg:w-1/3 p-4 lg:px-12">
+        <div className="text-[1.15rem] font-[500] md:text-[1.3rem] md:font-bold lg:h-[50vh] lg:w-1/3 p-4 lg:px-12">
           <div className="bg-grey-bg  p-4 rounded-[8px] flex flex-wrap justify-between items-center p-2">
             Order Summary
           </div>

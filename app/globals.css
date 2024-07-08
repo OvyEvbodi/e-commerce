@@ -24,6 +24,14 @@ body {
   color: rgb(var(--foreground-rgb));
   color: var(--grey-text);
 }
+::placeholder {
+  color: var(--grey-text);
+  opacity: 1; /* Firefox */
+}
+
+::-ms-input-placeholder { /* Edge 12 -18 */
+  color: var(--grey-text);
+}
 .input_search::before {
   content: '';
   width:15px;
