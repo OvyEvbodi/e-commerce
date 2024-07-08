@@ -1,11 +1,14 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '@reduxjs/toolkit/query';
+import BigCardProps from '@/interfaces/BigCardProps';
+
+const cart: BigCardProps[] = [];
 
 const cartSlice = createSlice({
   name: 'shop',
   initialState: {
-    cart: [],
+    cart,
     total: 34
   },
   reducers: {
