@@ -12,7 +12,7 @@ const Nav = () => {
         <div className="flex gap-2">
           <Link href="/">Home</Link>
           <Link href="products">Products</Link>
-          <Link href="Cart">Cart</Link>
+          <Link href="cart">Cart</Link>
         </div>
         <SearchBar /> 
       </div>

@@ -3,6 +3,7 @@ import SmallButton from "@/components/SmallButton";
 import { NextPage } from "next";
 import BigCardProps from "@/interfaces/BigCardProps";
 import Image from "next/image";
+import Link from "next/link";
 
 const ProductCard: NextPage<BigCardProps> = ({title, image, label, price}) => {
   return (
@@ -17,7 +18,9 @@ const ProductCard: NextPage<BigCardProps> = ({title, image, label, price}) => {
           <span className="font-bold text-[1.4rem]">${price}</span>
           <span className="text-[0.7rem] line-through">${price}</span>
         </div>
-        <SmallButton text='Add to cart' />
+        <Link href="cart">
+          <SmallButton text='Add to cart' />
+        </Link>
       </div>
     </div>
   )
