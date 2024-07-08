@@ -3,6 +3,7 @@ import { El_Messiri } from "next/font/google";
 import "./globals.css";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
+import StoreProvider from "./StoreProvider";
 
 const ElMessiri = El_Messiri({ subsets: ["latin"] });
 
@@ -18,11 +19,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={ElMessiri.className}>
-        <Nav />
-        {children}
-        <Footer />
-      </body>
+      <StoreProvider>
+        <body className={ElMessiri.className}>
+          <Nav />
+          {children}
+          <Footer />
+        </body>
+      </StoreProvider>
     </html>
   );
 }

@@ -4,6 +4,8 @@ import CartItem from "@/app/cart/CartItem";
 import { cart_list } from "@/api/data.json";
 import SmallButton from "@/components/SmallButton";
 import ProductSlide from "@/components/ProductSlide";
+import { useAppSelector, useAppDispatch } from "@/redux/hooks";
+import { addToCart, removeFromCart, increment, decrement } from "@/redux/cart.slice";
 import Link from "next/link";
 
 export const metadata = { title: 'Cart Helendo' };
