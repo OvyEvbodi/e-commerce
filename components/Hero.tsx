@@ -1,6 +1,7 @@
 // Hero section 
 
 import Button from "@/components/Button";
+import Link from "next/link";
 
 const Hero = () => {
   const buttonProps = {
@@ -14,7 +15,9 @@ const Hero = () => {
             <h6 className='text-orange uppercase tracking-wide leading-[25px]'>Chair Collection</h6>
             <h1 className="text-[2.4rem] text-grey-text leading-[50px] font-bold opacity-80">Discover Excellence At <span className=" opacity-100 text-green">Timble</span> Store   Your Ultimate Shopping</h1>
             <p className="text-[1.4rem] text-grey-text leading-8 font-normal">Welcome to Helendo Store, where excellence meets every shopping desire! Unwind in Excellence</p>
-            <Button {...buttonProps} />
+            <Link href="products">
+              <Button {...buttonProps} />
+            </Link>
           </div>
         </div>
         <div className="lg:w-[50vw] lg:h-[86vh] flex flex-col justify-center items-end">

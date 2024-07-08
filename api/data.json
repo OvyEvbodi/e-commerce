@@ -34,21 +34,21 @@
       "id": 1,
       "title": "Nordic dining chairs kitchen backrest stool INS",
       "description": "Sloid Wood leg, Plastic with Padded Seat Height 41cm Seat Depth 43cm Seat Width 48",
-      "image": "/chair_img_1.png",
+      "image": "/section-img-1.png",
       "label": "Nordic dining chairs"
     },
     {
       "id": 2,
       "title": "FINELY Modern Rustic Solid Pine Wood Dining Table",
-      "description": "This beautiful finely dining table combines the style of both modern classic and rustic furniture",
-      "image": "/chair_img_2.png",
+      "description": "This beautiful finely dining table is the style modern rustic furniture",
+      "image": "/section-img-2.png",
       "label": "FINELY Modern Rustic"
     },
     {
       "id": 3,
       "title": "Living Room Furniture Sold Wood Coffee Table",
       "description": "crafted with precision and care, this stunning piece ot furniture seamlessly blend functionality",
-      "image": "/chair_img_3.png",
+      "image": "/section-img-3.png",
       "label": "Living Room Furniture"
     }
   ],
@@ -75,7 +75,8 @@
       "description": "",
       "image": "/product_3.png",
       "label": "Living Room Furniture",
-      "price": 230
+      "price": 230,
+      "category": "sofa"
     },
     {
       "id": 4,
@@ -279,7 +280,7 @@
     },
     {
       "id": 5,
-      "title": "Accessories & Decor",
+      "title": "Accessories",
       "description": "Discover 150 Products",
       "image": "/decor.png",
       "label": "Arm Chairs"

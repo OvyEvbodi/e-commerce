@@ -1,0 +1,202 @@
+{
+  "product_cards": [
+    {
+      "id": 1,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage1.png",
+      "label": "Nordic dining chairs",
+      "price": 140,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 2,
+      "title": "Wood Dining Table",
+      "description": "",
+      "image": "/productImage2.png",
+      "label": "FINELY Modern Rustic",
+      "price": 100,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 3,
+      "title": "Living Room Furniture",
+      "description": "",
+      "image": "/productImage3.png",
+      "label": "Living Room Furniture",
+      "price": 230,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 4,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage4.png",
+      "label": "Nordic dining chairs",
+      "price": 165,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 5,
+      "title": "Wood Dining Table",
+      "description": "",
+      "image": "/productImage5.png",
+      "label": "FINELY Modern Rustic",
+      "price": 310,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 6,
+      "title": "Living Room Furniture",
+      "description": "",
+      "image": "/productImage6.png",
+      "label": "Living Room Furniture",
+      "price": 650,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 7,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage7.png",
+      "label": "Nordic dining chairs",
+      "price": 140,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 8,
+      "title": "Wood Dining Table",
+      "description": "",
+      "image": "/productImage8.png",
+      "label": "FINELY Modern Rustic",
+      "price": 100,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 9,
+      "title": "Living Room Furniture",
+      "description": "",
+      "image": "/productImage9.png",
+      "label": "Living Room Furniture",
+      "price": 230,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 10,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage10.png",
+      "label": "Nordic dining chairs",
+      "price": 165,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 11,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage11.png",
+      "label": "Nordic dining chairs",
+      "price": 140,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 12,
+      "title": "Wood Dining Table",
+      "description": "",
+      "image": "/productImage12.png",
+      "label": "FINELY Modern Rustic",
+      "price": 100,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 13,
+      "title": "Living Room Furniture",
+      "description": "",
+      "image": "/productImage13.png",
+      "label": "Living Room Furniture",
+      "price": 230,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 14,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage14.png",
+      "label": "Nordic dining chairs",
+      "price": 165,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 15,
+      "title": "Wood Dining Table",
+      "description": "",
+      "image": "/productImage15.png",
+      "label": "FINELY Modern Rustic",
+      "price": 100,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 16,
+      "title": "Nordic dining chairs ",
+      "description": "",
+      "image": "/productImage16.png",
+      "label": "Nordic dining chairs",
+      "price": 140,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 17,
+      "title": "Wood Dining Table",
+      "description": "",
+      "image": "/productImage17.png",
+      "label": "FINELY Modern Rustic",
+      "price": 100,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    },
+    {
+      "id": 18,
+      "title": "Living Room Furniture",
+      "description": "",
+      "image": "/productImage18.png",
+      "label": "Living Room Furniture",
+      "price": 230,
+      "discounted amount": 110,
+      "category": "sofa",
+      "cart_prev_img": ""
+    }
+  ]
+}

@@ -6,7 +6,7 @@ const Footer = () => {
     <div>
       <div id="footer" className="bg-light-green p-4 px-6 lg:px-12 lg:min-h-[30vh] flex flex-wrap justify-center gap-4 end">
         <div className="lg:w-[18vw]">
-          <h5 className="md:font-[600] md:tracking-wider uppercase text-green text-[2.1rem]">Timble<span className="text-[1rem] capitalize">Store</span></h5>
+          <h5 className="md:font-[600] md:tracking-wider uppercase text-green text-[2.1rem]">Helendo<span className="text-[1rem] capitalize">Store</span></h5>
           <p className="text-[0.9rem]">evbodiovo@gmail.com</p>
           <div className="flex mt-2 gap-2">
             <Image src='/linkedin.png' width={40} height={40} alt="Linkedin logo"/>
@@ -57,7 +57,7 @@ const Footer = () => {
       </div>
       <div>
         <hr></hr>
-        <h6 className="text-center p-4">evbodiovo@gmail.com</h6>
+        <h6 className="text-center p-4">&copy; Helendostores inc.</h6>
       </div>
     </div>
   )

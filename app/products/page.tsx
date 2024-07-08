@@ -10,7 +10,7 @@ const ProductsPage = () => {
         filter
       </div>
       <div className="p-4 min-w-[100vw] lg:min-w-[74vw] lg:w-[74vw] lg:min-h-[100vh]">
-        <h4 className="text-[1.05rem] font-[500]">Showing 1-15 0f 300 Results</h4>
+        <h4 className="text-[1.05rem] font-[500]"></h4>
         <div className="flex flex-wrap gap-4 lg:gap-6 justify-center">
           {
             product_cards.map(item => (
