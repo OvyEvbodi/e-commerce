@@ -3,6 +3,8 @@
 import { product_cards } from "@/api/data.json";
 import ProductCard from "@/components/productCard";
 
+export const metadata = { title: 'Products Helendo' };
+
 const ProductsPage = () => {
   return (
     <main className="flex flex-wrap">

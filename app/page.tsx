@@ -7,6 +7,8 @@ import Categories from "@/components/Categories";
 import Newsletter from "@/components/Newsletter";
 import Trending from "@/components/Trending";
 
+export const metadata = { title: 'Helendo Home' };
+
 export default function Home() {
   return (
     <main>

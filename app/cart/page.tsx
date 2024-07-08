@@ -6,6 +6,8 @@ import SmallButton from "@/components/SmallButton";
 import ProductSlide from "@/components/ProductSlide";
 import Link from "next/link";
 
+export const metadata = { title: 'Cart Helendo' };
+
 const Cart = () => {
   return (
     <main className="mb-6 lg:mb-16">

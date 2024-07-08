@@ -4,6 +4,9 @@ import SmallButton from "@/components/SmallButton";
 import { NextPage } from "next";
 import Link from "next/link";
 
+export const metadata = { title: 'Checkout Helendo' };
+
+
 interface CheckoutFormRowProps {
   text: string;
   placeholder: string;
