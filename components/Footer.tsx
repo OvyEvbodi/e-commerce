@@ -45,7 +45,7 @@ const Footer = () => {
             </ul>
           </div>
           <div className="lg:w-[22vw] ">
-          <h6>Newsletter</h6>
+          <h6 className="mb-4">Newsletter</h6>
           <div >
             <input className="py-3 text-[0.8rem] bg-grey-bg  pl-4 rounded-[6px]" type="text" placeholder="your email" />
             <button className=" py-2 px-6 text-sm hover:text-green rounded-[6px] border border-4 border-green hover:bg-white bg-green text-white transition-all duration-300">
@@ -54,7 +54,6 @@ const Footer = () => {
           </div>
         </div>
         </div>
-        
       </div>
       <div>
         <hr></hr>
