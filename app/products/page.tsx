@@ -1,7 +1,7 @@
 // product listing page
 
 import { product_cards } from "@/api/data.json";
-import ProductCard from "@/components/ProductCard";
+import ProductCard from "@/components/productCard";
 
 const ProductsPage = () => {
   return (
