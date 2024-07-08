@@ -1,11 +1,24 @@
 // card in section 2
+'use client'
+
 import SmallButton from "@/components/SmallButton";
 import { NextPage } from "next";
 import BigCardProps from "@/interfaces/BigCardProps";
+import { useSelector, useDispatch } from "react-redux";
+import { addToCart, removeFromCart, increment, decrement } from "@/redux/cart.slice";
+import { RootState } from "@/redux/store";
 import Image from "next/image";
 import Link from "next/link";
 
 const ProductCard: NextPage<BigCardProps> = ({title, image, label, price}) => {
+
+  const total = useSelector((state: RootState) => state.shop.total);
+  const storeCart = useSelector((state: RootState) => state.shop.cart);
+
+  const dispatch = useDispatch();
+
+
+
   return (
     <div className="w-[250px] sm:w-[280px] md:w-[300px] xl:w-[320px]">
       <div className="overflow-hidden ">
@@ -18,10 +31,11 @@ const ProductCard: NextPage<BigCardProps> = ({title, image, label, price}) => {
           <span className="font-bold text-[1.4rem]">${price}</span>
           <span className="text-[0.7rem] line-through">${price}</span>
         </div>
-        <Link href="cart">
-          <SmallButton text='Add to cart' />
-        </Link>
+        <SmallButton text='Add to cart' onClick={() => dispatch(addToCart({title, price}))}/>
       </div>
+
+      <div>{JSON.stringify(storeCart)}</div>
+
     </div>
   )
 };

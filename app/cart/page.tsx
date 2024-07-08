@@ -1,25 +1,19 @@
 // Carts page
-'use client'
+
 import CartItem from "@/app/cart/CartItem";
 import { cart_list } from "@/api/data.json";
 import SmallButton from "@/components/SmallButton";
 import ProductSlide from "@/components/ProductSlide";
-import { useSelector, useDispatch } from "react-redux";
-import { addToCart, removeFromCart, increment, decrement } from "@/redux/cart.slice";
 import Link from "next/link";
-import { RootState } from "@/redux/store";
 
-// export const metadata = { title: 'Cart Helendo' };
+export const metadata = { title: 'Cart Helendo' };
 
 const Cart = () => {
-
-  const total = useSelector((state: RootState) => state.shop.total);
-
   return (
     <main className="mb-6 lg:mb-16">
       <div className="p-6 lg:px-12 text-orange font-normal text-[1.05rem]">
         <span>&larr; </span>
-        <Link href="products">Back to products</Link>
+        <Link href="products">Back to products</Link> 
       </div>
       <div className="flex flex-wrap ">
         <div  className="md:min-w-[700px] lg:w-2/3  p-4 lg:px-12">
