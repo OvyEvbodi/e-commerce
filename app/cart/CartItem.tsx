@@ -19,7 +19,7 @@ const CartItem:NextPage<CartItemProps> = ({thumbnail, name, price, quantity }) =
       </div>
       <div className="md:w-3/5 text-[1.15rem] md:text-[1.3rem] gap-6 flex flex-wrap justify-evenly items-center p-2">
         <p className="">${price}</p>
-        <p>{quantity}</p>
+        <p className="bg-grey-bg p-1 px-2 rounded-full">{quantity}</p>
         <p>${quantity * price}</p>
         <Image src='/delete.png' width={30} height={40} alt={name} />
       </div>

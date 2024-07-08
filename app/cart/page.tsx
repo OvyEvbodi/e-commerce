@@ -3,6 +3,7 @@
 import CartItem from "@/app/cart/CartItem";
 import { cart_list } from "@/api/data.json";
 import SmallButton from "@/components/SmallButton";
+import ProductSlide from "@/components/ProductSlide";
 import Link from "next/link";
 
 const Cart = () => {
@@ -55,9 +56,11 @@ const Cart = () => {
             <Link href="checkout">
               <SmallButton text="Proceed to checkout" flag="fill" />
             </Link>
-            
           </div>
         </div>
+      </div>
+      <div>
+        <ProductSlide />
       </div>
     </main>
   )
