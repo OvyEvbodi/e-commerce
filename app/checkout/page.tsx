@@ -11,7 +11,7 @@ interface CheckoutFormRowProps {
 }
 const CheckoutFormRow: NextPage<CheckoutFormRowProps> = ({text, placeholder, type}) => {
   return (
-    <div className="flex flex-col p-2 ">
+    <div className="flex flex-col p-2 sm:min-w-[40vw] lg:min-w-[0vw]">
       <label className="text-[0.95rem] md:text-[1.05rem] font-[600]"
         htmlFor={text}>
           {text}
@@ -34,7 +34,7 @@ const Checkout = () => {
       <div className="flex flex-wrap ">
         <div  className="md:min-w-[700px] lg:w-2/3  p-4 lg:px-12">
           <form className="w-full min-h-[40vh]">
-            <div className="flex">
+            <div className=" flex ">
               <div className="md:w-1/2 capitalize">
                 <CheckoutFormRow text="first name" placeholder="Ovy" type="text" />
               </div>
