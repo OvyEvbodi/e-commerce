@@ -24,11 +24,23 @@ const DropdownOption:NextPage<DropdownOptionProps> = ({ icon, text }) => {
           
           <div onClick={toggle} className="mt-4 cursor-pointer flex items-center p-2 bg-grey-bg rounded-[33px] mb-4 font-[600] lg:text-[1.05rem]">
             { !optionToggle ? 
-              <p className="bg-[#becbce] w-[15.64px] h-[15.64px] rounded-full mr-2"></p>
+              <label htmlFor="filter_check" className="custom_uncheck mr-2 text-[#becbce]">
+                <input type="" id="filter_check" name="filter_check"/>
+                <span className="ball"></span>
+              </label>
             :  
-            <span className="text-orange box-border text-xs border border-orange rounded-full py-[3px] px-[7px] mr-2">&#9210;</span>
+              <label htmlFor="filter_check" className="custom_check mr-2">
+                  <input type="" id="filter_check" name="filter_check"/>
+                  <span className="ball"></span>
+              </label>
             }
-            <span >{text}</span>
+            {
+              !optionToggle ? 
+                <span >{text}</span>
+              :
+                <span className="text-orange">{text}</span>
+
+            }
           </div>
         
         ) 

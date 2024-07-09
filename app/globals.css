@@ -116,6 +116,38 @@ body {
   angle: -180 deg;
 }
 
+/* custom checkbox */
+.custom_check {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--orange);
+  border-radius: 50%;
+}
+.custom_check input, .custom_uncheck input {
+  display: none;
+}
+.custom_check .ball {
+  display: inline-block;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+  background-color: var(--orange);
+  border-radius: 50%;
+}
+
+.custom_uncheck {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #BECBCE;
+  border-radius: 50%;
+}
+
+
 /* Customize the label (the container) */
 .container {
   display: block;
