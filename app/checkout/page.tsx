@@ -106,12 +106,12 @@ const Checkout = () => {
                 <CheckoutFormRow text="CVV" placeholder="enter cvv" type="number" />
               </div>
             </div>
-            <div className="">
-            <label className="container">Use shipping address as billing address
+            <div className="mt-4">
+            <label className="c-container">Use shipping address as billing address
               <input type="checkbox" name="payment_type" />
               <span className="c-checkmark"></span>
             </label>
-            <label className="container">Accept terms and conditions
+            <label className="c-container">Accept terms and conditions
               <input type="checkbox" name="" />
               <span className="c-checkmark"></span>
             </label>

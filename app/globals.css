@@ -123,7 +123,7 @@ body {
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 0.7rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -144,8 +144,8 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 20px;
+  width: 20px;
   background-color: #eee;
   border-radius: 50%;
 }
@@ -157,7 +157,7 @@ body {
 
 /* When the radio button is checked, add a blue background */
 .container input:checked ~ .checkmark {
-  background-color: var(--green);
+  background-color: var(--orange);
 }
 
 /* Create the indicator (the dot/circle - hidden when not checked) */
@@ -174,23 +174,23 @@ body {
 
 /* Style the indicator (dot/circle) */
 .container .checkmark:after {
-  top: 9px;
-  left: 9px;
-  width: 8px;
-  height: 8px;
+  top: 7px;
+  left: 7px;
+  width: 7px;
+  height: 7px;
   border-radius: 50%;
   background: white;
 }
 
 /* --------------------------------------- */
 /* Customize the label (the container) */
-.container {
+.c-container {
   display: block;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 22px;
+  font-size: 0.6rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
@@ -198,7 +198,7 @@ body {
 }
 
 /* Hide the browser's default checkbox */
-.container input {
+.c-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -211,18 +211,18 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  height: 25px;
-  width: 25px;
+  height: 18px;
+  width: 18px;
   background-color: #eee;
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .c-checkmark {
+.c-container:hover input ~ .c-checkmark {
   background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
-.container input:checked ~ .c-checkmark {
+.c-container input:checked ~ .c-checkmark {
   background-color: var(--green);
 }
 
@@ -234,16 +234,16 @@ body {
 }
 
 /* Show the checkmark when checked */
-.container input:checked ~ .c-checkmark:after {
+.c-container input:checked ~ .c-checkmark:after {
   display: block;
 }
 
 /* Style the checkmark/indicator */
-.container .c-checkmark:after {
-  left: 9px;
-  top: 5px;
+.c-container .c-checkmark:after {
+  left: 7px;
+  top: 4px;
   width: 5px;
-  height: 10px;
+  height: 9px;
   border: solid white;
   border-width: 0 3px 3px 0;
   -webkit-transform: rotate(45deg);
