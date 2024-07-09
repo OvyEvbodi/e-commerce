@@ -3,6 +3,7 @@
 import SmallButton from "@/components/SmallButton";
 import { NextPage } from "next";
 import Link from "next/link";
+import CheckoutCard from "../cart/CheckoutCard";
 
 export const metadata = { title: 'Checkout Helendo' };
 
@@ -19,8 +20,8 @@ const CheckoutFormRow: NextPage<CheckoutFormRowProps> = ({text, placeholder, typ
         htmlFor={text}>
           {text}
       </label>
-      <input className="placeholder:text-grey-text text-[0.7rem] bg-grey-bg px-2 py-[10px] md:py-4 rounded-[8px]"
-        type={type} placeholder={placeholder}
+      <input className="text-[0.7rem] bg-grey-bg opacity-50 px-2 py-[10px] md:py-4 rounded-[8px]"
+        type={type} placeholder={placeholder} name={text}
       />
     </div>
   )
@@ -39,82 +40,85 @@ const Checkout = () => {
           <form className="w-full min-h-[40vh]">
             <div className=" flex ">
               <div className="md:w-1/2 capitalize">
-                <CheckoutFormRow text="first name" placeholder="Ovy" type="text" />
+                <CheckoutFormRow text="first name" placeholder="enter first name" type="text" />
               </div>
               <div className="md:w-1/2 capitalize">
-                <CheckoutFormRow text="last name" placeholder="Evbodi" type="text" />
+                <CheckoutFormRow text="last name" placeholder="enter last name" type="text" />
               </div>
             </div>
             <div className="flex">
               <div className="md:w-1/2 capitalize">
-                <CheckoutFormRow text="phone number" placeholder="9023334455" type="tel" />
+                <CheckoutFormRow text="phone number" placeholder="enter phone number" type="tel" />
               </div>
               <div className="md:w-1/2 capitalize">
-                <CheckoutFormRow text="email address" placeholder="evbodiovo@gmail.com" type="email" />
+                <CheckoutFormRow text="email address" placeholder="enter email" type="email" />
               </div>
             </div>
             <div className="capitalize">
-              <CheckoutFormRow text="country" placeholder="Nigeria" type="text" />
+              <CheckoutFormRow text="country" placeholder="enter country" type="text" />
             </div>
             <div className="flex">
               <div className="md:w-1/2 capitalize">
-                <CheckoutFormRow text="state" placeholder="Lagos state" type="text" />
+                <CheckoutFormRow text="state" placeholder="enter state" type="text" />
               </div>
               <div className="md:w-1/2 capitalize">
-                <CheckoutFormRow text="zip code" placeholder="012345" type="number" />
+                <CheckoutFormRow text="zip code" placeholder="enter zip code" type="number" />
               </div>
             </div>
             <div className="capitalize">
-              <CheckoutFormRow text="billing address" placeholder="123 Not Secure street" type="text" />
+              <CheckoutFormRow text="billing address" placeholder="enter billing address" type="text" />
             </div>         
           </form>
           <h6 className="text-[1.2rem] md:text-[2.1rem] font-[500] md:font-bold lg:py-8 capitalize">Payment method</h6>
           <form className="w-full min-h-[40vh]">
-            <div className="bg-blue-200">payment block</div>
+            {/* <div className="bg-blue-200">
+              <div className="flex gap-2">
+                <input type="radio" name="payment_type"/>
+                <label htmlFor="payment_type">Pay with Credit Card</label>
+              </div>
+            </div> */}
+                      
+            <label className="container">Pay with Credit Card
+              <input type="checkbox" name="payment_type" />
+              <span className="checkmark"></span>
+            </label>
+            <label className="container">Pay with PayPay
+              <input type="checkbox" name="payment_type" />
+              <span className="checkmark"></span>
+            </label>
+            <label className="container">Pay with gift cards
+              <input type="checkbox" name="payment_type" />
+              <span className="checkmark"></span>
+            </label>
             <div className="flex">
               <div className="md:w-1/2 capitalize">
-                <CheckoutFormRow text="name on card" placeholder="Ovy Evbodi" type="text" />
+                <CheckoutFormRow text="name on card" placeholder="enter card name" type="text" />
               </div>
               <div className="md:w-1/2 capitalize">
-                <CheckoutFormRow text="card number" placeholder="5399 0123 4567 8912" type="number" />
+                <CheckoutFormRow text="card number" placeholder="enter card number" type="number" />
               </div>
             </div>
             <div className="flex">
               <div className="md:w-1/2 capitalize">
-                <CheckoutFormRow text="expiry date" placeholder="07/26" type="date" />
+                <CheckoutFormRow text="expiry date" placeholder="enter expiry date" type="date" />
               </div>
               <div className="md:w-1/2 capitalize">
-                <CheckoutFormRow text="CVV" placeholder="321" type="number" />
+                <CheckoutFormRow text="CVV" placeholder="enter cvv" type="number" />
               </div>
             </div>
-            <div className="bg-blue-200">shipping block</div>
+            <div className="">
+            <label className="container">Use shipping address as billing address
+              <input type="checkbox" name="payment_type" />
+              <span className="c-checkmark"></span>
+            </label>
+            <label className="container">Accept terms and conditions
+              <input type="checkbox" name="" />
+              <span className="c-checkmark"></span>
+            </label>
+            </div>
           </form>
         </div>
-        <div className="text-[1.15rem] font-[500] md:text-[1.3rem] md:font-bold lg:h-[50vh] lg:w-1/3 p-4 lg:px-12">
-          <div className="bg-grey-bg  p-4 rounded-[8px] flex flex-wrap justify-between items-center p-2">
-            Order Summary
-          </div>
-          <div className="flex flex-wrap justify-between items-center p-4">
-            <p>Subtotal</p>
-            <p>$.00</p>
-          </div>
-          <div className="flex flex-wrap justify-between items-center p-4">
-            <p>Shipping</p>
-            <p>Free</p>
-          </div>
-          <div className="flex flex-wrap justify-between items-center p-4">
-            <p className="text-orange font-normal text-[1.05rem]">Add Coupon Code</p>
-          </div>
-          <div className="flex flex-wrap justify-between items-center p-4">
-            <p>Total</p>
-            <p>$.00</p>
-          </div>
-          <div className="text-center">
-            <Link href="checkout">
-              <SmallButton text="Proceed to checkout" flag="fill" />
-            </Link>
-          </div>
-        </div>
+        <CheckoutCard />
       </div>
     </main>
   )
