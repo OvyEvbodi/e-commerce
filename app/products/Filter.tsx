@@ -12,7 +12,7 @@ const Filter = () => {
   return (
     <section className="capitalize p-4 max-w-[340px]">
       <h2 className="font-bold mb-2 text-[1.7rem]">filter options</h2>
-      <div>
+      <div className="flex flex-col sm:flex-row sm:gap-6">
         <Dropdown text="category" icon="yes" filters={categoryList} />
         <Dropdown text="material" icon="no" filters={materialList} />
         <Dropdown text="colour" icon="yes"filters={colourList}  />
