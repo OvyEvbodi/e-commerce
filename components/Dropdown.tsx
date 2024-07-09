@@ -49,9 +49,15 @@ const Dropdown:NextPage<DropdownOptionProps> = ({ text, icon, filters }) => {
   const toggle = () => setselectToggle(!selectToggle);  
 
   return (
-    <div className=" mb-2 max-w-[290px] md:mb-6 lg:mb-8 py-4 lg:py-6 lg:px-7 border rounded-[20px] border-2 border-black">
+    <div className=" bg-white mb-2 max-w-[290px] md:mb-6 lg:mb-8 py-4 lg:py-6 lg:px-7 border rounded-[20px] border-2 border-black">
       <div onClick={ toggle } className="pl-4 cursor-pointer hover:opacity-85 font-bold text-[1.05rem] flex justify-between">{text}
-        <span className="px-4 text-orange text-sm">&#9206;</span>
+        {
+            selectToggle ? 
+              <span className="px-4 text-orange text-md">&#9206;</span> 
+            :
+              <span className="px-4 text-orange text-md">&#9207;</span>
+        }
+        {/* <span className="px-4 text-orange text-sm">&#9206;</span> */}
       </div>
       <div className={ !selectToggle ? "hidden" : "block" }>
         <div className={icon === "no" ? "flex flex-wrap gap-4 items-stretch" : "flex flex-col items-stretch"}>
