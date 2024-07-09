@@ -7,7 +7,7 @@ import { removeFromCart, increment, decrement } from "@/redux/cart.slice";
 import { RootState } from "@/redux/store";
 import BigCardProps from "@/interfaces/BigCardProps";
 
-const CartItem:NextPage<BigCardProps> = ({image, title, price, quantity }) => {
+const CartItem:NextPage<BigCardProps> = ({id, image, title, price, quantity }) => {
   const total = useSelector((state: RootState) => state.shop.total);
   const storeCart = useSelector((state: RootState) => state.shop.cart);
   const dispatch = useDispatch();
@@ -25,7 +25,9 @@ const CartItem:NextPage<BigCardProps> = ({image, title, price, quantity }) => {
         <p className="">${price}</p>
         <p className="bg-grey-bg p-1 px-2 rounded-full">{quantity}</p>
         <p>${quantity! * price!}</p>
-        <Image src='/delete.png' width={30} height={40} alt={title} />
+        <button onClick={() => dispatch(removeFromCart(id))}>
+          <Image src='/close-circle.png' width={30} height={40} alt={title} />
+        </button>
       </div>
     </div>
   )

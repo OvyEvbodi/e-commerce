@@ -10,7 +10,7 @@ import { RootState } from "@/redux/store";
 import Image from "next/image";
 import Link from "next/link";
 
-const ProductCard: NextPage<BigCardProps> = ({title, image, label, price}) => {
+const ProductCard: NextPage<BigCardProps> = ({id, title, image, label, price}) => {
 
   const total = useSelector((state: RootState) => state.shop.total);
   const storeCart = useSelector((state: RootState) => state.shop.cart);
@@ -28,7 +28,7 @@ const ProductCard: NextPage<BigCardProps> = ({title, image, label, price}) => {
           <span className="font-bold text-[1.4rem]">${price}</span>
           <span className="text-[0.7rem] line-through">${price}</span>
         </div>
-        <SmallButton text='Add to cart' onClick={() => dispatch(addToCart({title, price, quantity: 1, image}))}/>
+        <SmallButton text='Add to cart' onClick={() => dispatch(addToCart({id, title, price, quantity: 1, image}))}/>
       </div>
 
       <div>{JSON.stringify(storeCart)}</div>
