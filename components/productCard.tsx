@@ -7,7 +7,7 @@ import BigCardProps from "@/interfaces/BigCardProps";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "@/redux/cart.slice";
 import Image from "next/image";
-import { toast } from 'react-toastify';
+import { Slide, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { RootState } from "@/redux/store";
 
@@ -23,11 +23,31 @@ const ProductCard: NextPage<BigCardProps> = ({id, title, image, label, price}) =
 
     if (index === -1) {
       dispatch(addToCart({id, title, price, quantity: 1, image}))
-      toast.success('Item added to cart')
+      toast.success('Item added to cart',  {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+        })
     } else {
       console.log('item already in cart!')
       console.log(index)
-      toast.error("You've already picked this")
+      toast.error("You've already picked this",  {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+        })
     }
 
   };
