@@ -3,10 +3,13 @@
 import { product_cards } from "@/api/data.json";
 import ProductCard from "@/components/productCard";
 import Filter from "@/app/products/Filter";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export const metadata = { title: 'Products Helendo' };
 
 const ProductsPage = () => {
+
   return (
     <main className="flex flex-wrap">
       <div className="p-4 min-w-[100vw] lg:min-w-[28vw] lg:w-[28vw] lg:min-h-[100vh]">
@@ -24,8 +27,10 @@ const ProductsPage = () => {
           }
         </div>
       </div>
+      <ToastContainer />
     </main>
   )
 };
 
 export default ProductsPage;
+

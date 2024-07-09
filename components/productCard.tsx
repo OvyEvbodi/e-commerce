@@ -4,14 +4,34 @@
 import SmallButton from "@/components/SmallButton";
 import { NextPage } from "next";
 import BigCardProps from "@/interfaces/BigCardProps";
-import { useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "@/redux/cart.slice";
 import Image from "next/image";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { RootState } from "@/redux/store";
+
 
 const ProductCard: NextPage<BigCardProps> = ({id, title, image, label, price}) => {
 
   const dispatch = useDispatch();
+  const storeCart = useSelector((state: RootState) => state.shop.cart);
 
+  const addNewItem = () => {
+    
+    const index = storeCart.findIndex((item => id === item.id));
+
+    if (index === -1) {
+      dispatch(addToCart({id, title, price, quantity: 1, image}))
+      toast.success('Item added to cart')
+    } else {
+      console.log('item already in cart!')
+      console.log(index)
+      toast.error("You've already picked this")
+    }
+
+  };
+  
   return (
     <div className="w-[240px] md:w-[260px] lg:w-[270px] xl:w-[290px]">
       <div className="overflow-hidden ">
@@ -24,7 +44,7 @@ const ProductCard: NextPage<BigCardProps> = ({id, title, image, label, price}) =
           <span className="font-bold text-[1.4rem]">${price}</span>
           <span className="text-[0.7rem] line-through">${price}</span>
         </div>
-        <SmallButton text='Add to cart' onClick={() => dispatch(addToCart({id, title, price, quantity: 1, image}))}/>
+        <SmallButton text='Add to cart' onClick={addNewItem}/>
       </div>
     </div>
   )
