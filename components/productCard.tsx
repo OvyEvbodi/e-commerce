@@ -30,9 +30,6 @@ const ProductCard: NextPage<BigCardProps> = ({id, title, image, label, price}) =
         </div>
         <SmallButton text='Add to cart' onClick={() => dispatch(addToCart({id, title, price, quantity: 1, image}))}/>
       </div>
-
-      <div>{JSON.stringify(storeCart)}</div>
-
     </div>
   )
 };

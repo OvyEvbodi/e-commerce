@@ -16,7 +16,7 @@ const CartPage = () => {
     <main className="mb-6 lg:mb-16">
       <div className="p-6 lg:px-12 text-orange font-normal text-[1.05rem]">
         <span>&larr; </span>
-        <Link href="products">Back to products</Link> 
+        <Link href="products" className=" hover:opacity-80">Back to products</Link> 
       </div>
       <div className="flex flex-wrap ">
         <div  className="md:min-w-[700px] lg:w-2/3  p-4 lg:px-12">

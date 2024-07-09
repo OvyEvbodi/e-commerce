@@ -23,7 +23,11 @@ const CartItem:NextPage<BigCardProps> = ({id, image, title, price, quantity }) =
       </div>
       <div className="md:w-3/5 text-[1.15rem] md:text-[1.3rem] gap-6 flex flex-wrap justify-evenly items-center p-2">
         <p className="">${price}</p>
-        <p className="bg-grey-bg p-1 px-2 rounded-full">{quantity}</p>
+        <div className="bg-grey-bg w-[100px] px-[12px] rounded-[25px] flex items-center justify-between">
+          <div onClick={() => dispatch(decrement({ id, quantity }))} className="w-[25px] h-[25px] cursor-pointer bg-white text-center rounded-full shadow-[0_4px_6px_-1px_rgba(0,0,0,0.6)] transition-colors hover:bg-green hover:text-white">-</div>
+          <p className=" p-1 px-2 ">{quantity}</p>
+          <div onClick={() => dispatch(increment(id))}  className="w-[25px] h-[25px] cursor-pointer bg-white text-center rounded-full shadow-[0_4px_6px_-1px_rgba(0,0,0,0.6)] transition-colors hover:bg-green hover:text-white">+</div>
+        </div>
         <p>${quantity! * price!}</p>
         <button onClick={() => dispatch(removeFromCart(id))}>
           <Image src='/close-circle.png' width={30} height={40} alt={title} />

@@ -2,14 +2,14 @@
 'use client'
 
 import { useSelector, useDispatch } from "react-redux";
-import { addToCart, removeFromCart, increment, decrement } from "@/redux/cart.slice";
 import { RootState } from "@/redux/store";
 import SmallButton from "@/components/SmallButton"
 import Link from "next/link"
 
 
 const CheckoutCard = () => {
-  const total = useSelector((state: RootState) => state.shop.total);
+  const storeCart = useSelector((state: RootState) => state.shop.cart);
+  const total = storeCart.reduce((prev, curr) => prev + (curr.quantity! * curr.price!), 0);
 
   return (
     <div className="text-[1.15rem] font-[500] md:text-[1.3rem] md:font-bold lg:h-[50vh] lg:w-1/3 p-4 lg:px-12">
@@ -25,7 +25,7 @@ const CheckoutCard = () => {
             <p>Free</p>
           </div>
           <div className="flex flex-wrap justify-between items-center p-4">
-            <p className="text-orange font-normal text-[1.05rem]">Add Coupon Code</p>
+            <p className="cursor-pointer text-orange font-normal text-[1.05rem] hover:opacity-85">Add Coupon Code</p>
           </div>
           <div className="flex flex-wrap justify-between items-center p-4">
             <p>Total</p>
