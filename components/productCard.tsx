@@ -14,10 +14,7 @@ const ProductCard: NextPage<BigCardProps> = ({title, image, label, price}) => {
 
   const total = useSelector((state: RootState) => state.shop.total);
   const storeCart = useSelector((state: RootState) => state.shop.cart);
-
   const dispatch = useDispatch();
-
-
 
   return (
     <div className="w-[250px] sm:w-[280px] md:w-[300px] xl:w-[320px]">
@@ -31,7 +28,7 @@ const ProductCard: NextPage<BigCardProps> = ({title, image, label, price}) => {
           <span className="font-bold text-[1.4rem]">${price}</span>
           <span className="text-[0.7rem] line-through">${price}</span>
         </div>
-        <SmallButton text='Add to cart' onClick={() => dispatch(addToCart({title, price}))}/>
+        <SmallButton text='Add to cart' onClick={() => dispatch(addToCart({title, price, quantity: 1, image}))}/>
       </div>
 
       <div>{JSON.stringify(storeCart)}</div>

@@ -8,4 +8,5 @@ export default interface BigCardProps{
   label: string;
   price?: number;
   category?: string;
+  quantity?: number;
 }
