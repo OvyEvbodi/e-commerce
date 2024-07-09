@@ -6,7 +6,6 @@ import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import { Provider } from "react-redux";
 import { store } from "@/redux/store";
-// import StoreProvider from "./StoreProvider";
 
 const ElMessiri = El_Messiri({ subsets: ["latin"] });
 

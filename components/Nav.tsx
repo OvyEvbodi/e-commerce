@@ -6,7 +6,11 @@ const Nav = () => {
   return (
     <nav className="bg-off-white text-green px-6 md:px-12 md:px-16 flex justify-between w-full lg:min-h-[14vh]">
       <div className=" flex flex-wrap items-center">
-        <h1 className="md:font-[600] md:tracking-wider uppercase text-green text-[2.1rem]"><Link href="/">Helendo<span className="text-[1rem] capitalize">Store</span></Link></h1>
+        {/* link logo to homepage, instead of products.. */}
+        {/* <h1 className="md:font-[600] md:tracking-wider uppercase text-green text-[2.1rem]"><Link href="products">Helendo<span className="text-[1rem] capitalize">Store</span></Link></h1> */}
+  
+        <h1 className="md:font-[600] md:tracking-wider uppercase text-green text-[2.1rem]">Helendo<span className="text-[1rem] capitalize">Store</span></h1>
+
       </div>
       <div className="flex gap-6 flex-wrap items-center justify-between lg:w-1/2">
         <div className="flex gap-6">

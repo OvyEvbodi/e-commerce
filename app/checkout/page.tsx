@@ -3,7 +3,7 @@
 import SmallButton from "@/components/SmallButton";
 import { NextPage } from "next";
 import Link from "next/link";
-import CheckoutCard from "../cart/CheckoutCard";
+import CheckoutCard from "@/app/cart/CheckoutCard";
 
 export const metadata = { title: 'Checkout Helendo' };
 
