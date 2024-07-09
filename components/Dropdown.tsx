@@ -22,7 +22,7 @@ const DropdownOption:NextPage<DropdownOptionProps> = ({ icon, text }) => {
       { icon == "yes" ? 
         (
           
-          <div onClick={toggle} className="mt-4 cursor-pointer flex p-2 bg-grey-bg rounded-[33px] mb-4 font-[600] lg:text-[1.05rem]">
+          <div onClick={toggle} className="mt-4 cursor-pointer flex items-center p-2 bg-grey-bg rounded-[33px] mb-4 font-[600] lg:text-[1.05rem]">
             { !optionToggle ? 
               <p className="bg-[#becbce] w-[15.64px] h-[15.64px] rounded-full mr-2"></p>
             :  
@@ -32,7 +32,7 @@ const DropdownOption:NextPage<DropdownOptionProps> = ({ icon, text }) => {
           </div>
         
         ) 
-      : 
+      :
         (
           <div onClick={ toggle }  className="mt-4 cursor-pointer bg-grey-bg rounded-[33px] font-[600] lg:text-[1.05rem] max-w-max flex ">
             <span className={ optionToggle ? "text-orange p-1 px-4 " : " p-1 px-4 "}>{text}</span>

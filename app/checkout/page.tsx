@@ -79,15 +79,15 @@ const Checkout = () => {
             </div> */}
                       
             <label className="container">Pay with Credit Card
-              <input type="checkbox" name="payment_type" />
+              <input type="radio" name="payment_type" />
               <span className="checkmark"></span>
             </label>
             <label className="container">Pay with PayPay
-              <input type="checkbox" name="payment_type" />
+              <input type="radio" name="payment_type" />
               <span className="checkmark"></span>
             </label>
             <label className="container">Pay with gift cards
-              <input type="checkbox" name="payment_type" />
+              <input type="radio" name="payment_type" />
               <span className="checkmark"></span>
             </label>
             <div className="flex">

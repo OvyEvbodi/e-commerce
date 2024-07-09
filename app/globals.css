@@ -188,9 +188,10 @@ body {
   display: block;
   position: relative;
   padding-left: 35px;
+  padding-top: 3px;
   margin-bottom: 12px;
   cursor: pointer;
-  font-size: 0.6rem;
+  font-size: 0.7rem;
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
