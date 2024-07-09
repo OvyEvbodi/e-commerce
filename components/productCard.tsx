@@ -7,14 +7,13 @@ import BigCardProps from "@/interfaces/BigCardProps";
 import { useDispatch } from "react-redux";
 import { addToCart } from "@/redux/cart.slice";
 import Image from "next/image";
-import Link from "next/link";
 
 const ProductCard: NextPage<BigCardProps> = ({id, title, image, label, price}) => {
 
   const dispatch = useDispatch();
 
   return (
-    <div className="w-[250px] sm:w-[280px] md:w-[300px] xl:w-[320px]">
+    <div className="w-[240px] md:w-[260px] lg:w-[270px] xl:w-[290px]">
       <div className="overflow-hidden ">
         <Image src={image} width={350} height={600} alt={label} />
         {/* <img src={image} className="h-full w-full"/> */}
