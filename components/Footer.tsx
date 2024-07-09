@@ -57,7 +57,7 @@ const Footer = () => {
       </div>
       <div>
         <hr></hr>
-        <h6 className="text-center p-4">&copy; Helendostores inc. {new Date().getFullYear()}</h6>
+        <h6 className="text-center p-4">&copy; Helendo stores inc. {new Date().getFullYear()}</h6>
       </div>
     </div>
   )

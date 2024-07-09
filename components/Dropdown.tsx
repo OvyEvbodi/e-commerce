@@ -1,4 +1,5 @@
 // dropdown component
+'use client'
 
 import { NextPage } from "next";
 import { useState } from "react";
@@ -11,26 +12,30 @@ interface DropdownOptionProps {
 }
 
 const DropdownOption:NextPage<DropdownOptionProps> = ({ icon, text }) => {
+
+  const [ optionToggle, setOptionToggle ] = useState(false);
+
+  const toggle = () => setOptionToggle(!optionToggle);  
+
   return (
     <div>
       { icon == "yes" ? 
         (
-          <div className="flex p-2 bg-grey-bg rounded-[33px] mb-4 font-[600] lg:text-[1.05rem]">
-            <p className="bg-[#becbce] w-[15.64px] h-[15.64px] rounded-full mr-2"></p>
-            {/* <span className="text-orange box-border text-xs border border-orange rounded-full py-[3px] px-[7px] mr-2">&#9210;</span> */}
+          
+          <div onClick={toggle} className="cursor-pointer flex p-2 bg-grey-bg rounded-[33px] mb-4 font-[600] lg:text-[1.05rem]">
+            { !optionToggle ? 
+              <p className="bg-[#becbce] w-[15.64px] h-[15.64px] rounded-full mr-2"></p>
+            :  
+            <span className="text-orange box-border text-xs border border-orange rounded-full py-[3px] px-[7px] mr-2">&#9210;</span>
+            }
             <span >{text}</span>
           </div>
-        //   <div className="flex p-2 bg-grey-bg rounded-[33px] mb-4 font-[600] lg:text-[1.05rem]">
-        //   <p className="bg-[#becbce] w-[15.64px] h-[15.64px] rounded-full mr-2"></p>
-        //   <span className="text-orange box-border text-xs border border-orange rounded-full py-[3px] px-[7px] mr-2">&#9210;</span>
-        //   <span >{text}</span>
-        // </div>
+        
         ) 
       : 
         (
-          <div className="bg-grey-bg rounded-[33px] font-[600] lg:text-[1.05rem] max-w-max flex ">
-            <span className="text-orange p-1 px-4 ">{text}</span>
-            {/* <span className=" p-1 px-4 ">{text}</span> */}
+          <div onClick={toggle}  className="cursor-pointer bg-grey-bg rounded-[33px] font-[600] lg:text-[1.05rem] max-w-max flex ">
+            <span className={ optionToggle ? "text-orange p-1 px-4 " : " p-1 px-4 "}>{text}</span>
           </div>
         ) }
     </div>
