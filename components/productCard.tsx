@@ -4,16 +4,13 @@
 import SmallButton from "@/components/SmallButton";
 import { NextPage } from "next";
 import BigCardProps from "@/interfaces/BigCardProps";
-import { useSelector, useDispatch } from "react-redux";
-import { addToCart, removeFromCart, increment, decrement } from "@/redux/cart.slice";
-import { RootState } from "@/redux/store";
+import { useDispatch } from "react-redux";
+import { addToCart } from "@/redux/cart.slice";
 import Image from "next/image";
 import Link from "next/link";
 
 const ProductCard: NextPage<BigCardProps> = ({id, title, image, label, price}) => {
 
-  const total = useSelector((state: RootState) => state.shop.total);
-  const storeCart = useSelector((state: RootState) => state.shop.cart);
   const dispatch = useDispatch();
 
   return (

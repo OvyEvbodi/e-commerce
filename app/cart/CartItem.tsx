@@ -30,7 +30,7 @@ const CartItem:NextPage<BigCardProps> = ({id, image, title, price, quantity }) =
         </div>
         <p>${quantity! * price!}</p>
         <button onClick={() => dispatch(removeFromCart(id))}>
-          <Image src='/close-circle.png' width={30} height={40} alt={title} />
+          <Image src='/close-circle.png' width={30} height={40} alt={title} className=" hover:opacity-80" />
         </button>
       </div>
     </div>
