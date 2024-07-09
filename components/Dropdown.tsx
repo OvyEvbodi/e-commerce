@@ -1,16 +1,46 @@
 // dropdown component
 
-const Dropdown = () => {
+import { NextPage } from "next";
+import { useState } from "react";
+
+
+interface DropdownOptionProps {
+  text: string;
+  icon: string;
+  filters?: string [];
+}
+
+const DropdownOption:NextPage<DropdownOptionProps> = ({ icon, text }) => {
   return (
     <div>
-      <label htmlFor="categories">Category</label>
+      { icon == "yes" ? 
+        (
+          <div className="bg-slate-300 p-1 ">
+            <span>0 </span>
+            <span>{text}</span>
+          </div>
+        ) 
+      : 
+        (
+          <div className="bg-slate-200 p-1 ">
+            <span>{text}</span>
+          </div>
+        ) }
+    </div>
+  )
+};
 
-      <select name="cat">
-        <option value="Nig">Nig</option>
-        <option value="Nig">Nig</option>
-        <option value="Nig">Nig</option>
-        <option value="Nig">Nig</option>
-      </select>
+const Dropdown:NextPage<DropdownOptionProps> = ({ text, icon, filters }) => {
+  return (
+    <div>
+      <div className="font-bold text-[1.05rem]">{text}</div>
+      <div>
+        {
+          filters!.map( (option, index) => (
+            <DropdownOption text={option} icon={icon} key={index}/>
+          ))
+        }
+      </div>
     </div>
   )
 };

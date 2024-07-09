@@ -2,14 +2,15 @@
 
 import { product_cards } from "@/api/data.json";
 import ProductCard from "@/components/productCard";
+import Filter from "@/app/products/Filter";
 
 export const metadata = { title: 'Products Helendo' };
 
 const ProductsPage = () => {
   return (
     <main className="flex flex-wrap">
-      <div className="bg-slate-200 p-4 min-w-[100vw] lg:min-w-[26vw] lg:w-[26vw] lg:min-h-[100vh]">
-        filter
+      <div className="bg-slate-100 p-4 min-w-[100vw] lg:min-w-[26vw] lg:w-[26vw] lg:min-h-[100vh]">
+        <Filter />
       </div>
       <div className="p-4 min-w-[100vw] lg:min-w-[74vw] lg:w-[74vw] lg:min-h-[100vh]">
         <h4 className="text-[1.05rem] font-[500]"></h4>
