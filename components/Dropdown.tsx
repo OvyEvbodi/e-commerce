@@ -61,7 +61,7 @@ const Dropdown:NextPage<DropdownOptionProps> = ({ text, icon, filters }) => {
   const toggle = () => setselectToggle(!selectToggle);  
 
   return (
-    <div className=" bg-white mb-2 max-w-[290px] md:mb-6 lg:mb-8 py-4 lg:py-6 lg:px-7 border rounded-[20px] border-2 border-black">
+    <div className="bg-white mb-2 max-w-[250px] md:mb-6 lg:mb-1 py-4 lg:py-4 lg:px-7 border rounded-[20px] border-2 border-black">
       <div onClick={ toggle } className="pl-4 cursor-pointer hover:opacity-85 font-bold text-[1.05rem] flex justify-between">{text}
         {
             selectToggle ? 
