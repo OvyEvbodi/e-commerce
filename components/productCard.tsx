@@ -59,7 +59,7 @@ const ProductCard: NextPage<BigCardProps> = ({id, title, image, label, price}) =
         {/* <img src={image} className="h-full w-full"/> */}
       </div>
       <div className="p-2 md:p-4 text-left]">
-        <h5 className="text-[1.05rem] text-grey-text leading-8">{title}</h5>
+        <h5 className="text-[1.4rem] font-bold text-grey-text leading-8">{title}</h5>
         <div className="flex">
           <span className="font-bold text-[1.4rem]">${price}</span>
           <span className="text-[0.7rem] line-through">${price}</span>
