@@ -10,9 +10,11 @@ const Filter = () => {
   const availabilityList = ["in stock", "out of stock"];
 
   return (
-    <section className="capitalize p-4 lg:max-w-[340px] relative">
+    // <section className="capitalize p-4 lg:max-w-[340px] relative">
+    <section className="capitalize p-4 lg:max-w-[340px]">
       <h2 className="font-bold mb-2 text-[1.7rem]">filter options</h2>
-      <div className="sm:flex sm:flex-wrap sm:gap-6 sm:items-start sm:absolute lg:static lg:block">
+      {/* <div className="sm:flex sm:flex-wrap sm:gap-6 sm:items-start sm:absolute lg:static lg:block"> */}
+      <div className="sm:flex sm:flex-wrap sm:gap-6 sm:items-start lg:flex-col lg:items-stretch">
         <Dropdown text="category" icon="yes" filters={categoryList} />
         <Dropdown text="material" icon="no" filters={materialList} />
         <Dropdown text="colour" icon="yes"filters={colourList}  />
