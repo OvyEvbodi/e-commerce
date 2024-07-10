@@ -20,7 +20,7 @@ const Cart = () => {
         ))
         } </div> 
         :
-        <div className="flex flex-col justify-center items-center font-bold text-lg">It looks like you haven't made a choice yet 
+        <div className="flex flex-col justify-center items-center font-bold text-lg">It looks like you haven&apos;t made a choice yet 
           <button className="max-w-max my-1 py-1 px-8 text-sm hover:text-green rounded-[3px] border border-2 border-green hover:bg-white bg-green text-white transition-all duration-300">
         <Link href="products" >Shop now</Link>
       </button>
