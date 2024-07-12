@@ -53,13 +53,13 @@ const ProductCard: NextPage<BigCardProps> = ({id, title, image, label, price}) =
   };
   
   return (
-    <div className="w-[240px] md:w-[260px] lg:w-[270px] xl:w-[290px]">
+    <div className="w-[240px] md:w-[280px] lg:w-[320px] xl:w-[350px]">
       <div className="overflow-hidden ">
         <Image src={image} width={350} height={600} alt={label} />
         {/* <img src={image} className="h-full w-full"/> */}
       </div>
-      <div className="p-2 md:p-4 text-left]">
-        <h5 className="text-[1.4rem] font-bold text-grey-text leading-8">{title}</h5>
+      <div className="py-2 md:py-4 text-left]">
+        <h5 className="text-[1.4rem] text-grey-text font-[400] leading-8">{title}</h5>
         <div className="flex">
           <span className="font-bold text-[1.4rem]">${price}</span>
           <span className="text-[0.7rem] line-through">${price}</span>

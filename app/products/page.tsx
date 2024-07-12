@@ -11,7 +11,7 @@ export const metadata = { title: 'Products Helendo' };
 const ProductsPage = () => {
 
   return (
-    <main className=" flex justify-center items-center">
+    <main className="flex justify-center items-center">
       <div className="xl:max-w-[1600px]">
         <div className="flex flex-wrap ">
           <div className="p-4 lg:min-w-[28%] lg:w-[28%] lg:min-h-[100vh] lg:pl-16 2xl:pl-28">
