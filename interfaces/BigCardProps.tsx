@@ -4,7 +4,7 @@ export default interface BigCardProps{
   id?: number;
   title: string;
   description: string;
-  image: string;
+  image: any[];
   label: string;
   price?: number;
   category?: string;
