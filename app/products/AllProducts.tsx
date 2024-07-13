@@ -25,9 +25,7 @@ const getProducts = async () => {
 
 const AllProducts = async () => {
 
-  const apiResponse = await getProducts();
-  console.log( apiResponse )
-  
+  const apiResponse = await getProducts();  
 
   return (
     <div className=" p-4 md:pt-10 min-w-[100vw] lg:min-w-[72%] lg:w-[72%] lg:min-h-[100vh]">
