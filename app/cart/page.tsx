@@ -32,9 +32,9 @@ const CartPage = () => {
         </div>
         <CheckoutCard />
       </div>
-      <div>
+      {/* <div>
         <ProductSlide />
-      </div>
+      </div> */}
     </main>
   )
 };
