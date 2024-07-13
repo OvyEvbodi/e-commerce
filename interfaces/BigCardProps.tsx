@@ -1,4 +1,5 @@
 // big card interface
+import { ProdGalleryProps } from "@/app/products/ProdImgGallery"
 
 export default interface BigCardProps {
   id?: number;

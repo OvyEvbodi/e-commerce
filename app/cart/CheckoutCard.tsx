@@ -3,11 +3,13 @@
 
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store";
-import SmallButton from "@/components/SmallButton"
+import SmallButton from "@/components/SmallButton";
+import CheckoutButton, { CheckoutButtonProps } from "@/app/checkout/CheckoutButton"
 import Link from "next/link"
+import { NextPage } from "next";
 
 
-const CheckoutCard = () => {
+const CheckoutCard:NextPage<CheckoutButtonProps> = ({text, pageUrl, type}) => {
   const storeCart = useSelector((state: RootState) => state.shop.cart);
   const total = storeCart.reduce((prev, curr) => prev + (curr.quantity! * curr.price!), 0);
 
@@ -32,9 +34,7 @@ const CheckoutCard = () => {
             <p>${total}</p>
           </div>
           <div className="text-center">
-            <Link href="checkout">
-              <SmallButton text="Proceed to checkout" flag="fill" />
-            </Link>
+            <CheckoutButton text={text} pageUrl={pageUrl} type={type} />
           </div>
         </div>
   )

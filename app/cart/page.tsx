@@ -30,7 +30,7 @@ const CartPage = () => {
           </div>
           <Cart />
         </div>
-        <CheckoutCard />
+        <CheckoutCard text="Proceed to checkout" pageUrl="/checkout"/>
       </div>
       <div>
         <ProductSlide />
