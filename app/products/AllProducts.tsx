@@ -3,7 +3,6 @@
 import { productCardProps } from "@/interfaces/BigCardProps";
 import axios from "axios";
 import ProductCard from "@/components/productCard";
-import ArrowButton from "@/components/ArrowButton";
 import Pagination from "@/components/Pagination";
 
 let size = 4;
@@ -11,7 +10,6 @@ let page = 1;
 const apikey = "a8e4e1fe190d4cdab5b445261358fbec20240712153100635723";
 const appID = "RTUGXRG9D1CCIM5";
 const organizationID = "82a6b31709ee4b4f96d04a3dacf37b27";
-let total = 0;
 
 const productUrl = `https://api.timbu.cloud/products?page=${page}&size=${size}&Appid=${appID}&Apikey=${apikey}&organization_id=${organizationID}`;
 
@@ -51,6 +49,7 @@ const AllProducts = async () => {
           productList.map((item: productCardProps ) => (
             <div key={item.id}>
               <ProductCard { ...item } />
+              <p>{item.id}</p>
             </div>
           ))
         }
