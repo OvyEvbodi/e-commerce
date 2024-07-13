@@ -44,7 +44,7 @@ const ProductDetails = async ( {params} : {params: {prod_id: string} } ) => {
 
   return (
     <section className="flex flex-col items-center justify-center" >
-      <div className="bg-blue-200 p-6 lg:px-12 text-orange font-normal text-[1.05rem]">
+      <div className="p-6 lg:px-12 text-orange font-normal text-[1.05rem]">
         <span>&larr; </span>
         <Link href="/products" className=" hover:opacity-80">Back to products</Link> 
       </div>

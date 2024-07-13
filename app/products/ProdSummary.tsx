@@ -76,7 +76,7 @@ const ProdSummary:NextPage<ProductSummaryProps> = (props) => {
   return (
     <div className="capitalize min-w-[250px]  max-w-[420px] min-h-[300px] lg:min-w-[400px] flex flex-col gap-6">
       <div className="bg-grey-bg font-bold text-[0.8rem] flex flex-col items-start justify-center rounded-[8px] p-4 px-2">
-        <p>save {props.price - props.discount}</p>
+        <p>save ${0.1 * props.price}</p>
       </div>
       <div className="flex flex-col items-start justify-center p-1 px-2">
         <p className="text-[0.7rem]">{props.title}</p>
@@ -85,7 +85,7 @@ const ProdSummary:NextPage<ProductSummaryProps> = (props) => {
       <div className="flex flex-col items-start justify-center p-1 px-2">
         <div className="flex gap-2">
           <p className="text-[1.4rem] font-bold">${props.price}</p>
-          <p className="text-[0.7rem]  line-through">${props.discount}</p>
+          <p className="text-[0.7rem]  line-through">${0.1 * props.price +  props.price}</p>
         </div>
         <div className="flex gap-2">
           <p>Product code: {props.code}</p>
@@ -102,7 +102,7 @@ const ProdSummary:NextPage<ProductSummaryProps> = (props) => {
       <div className="flex items-start justify-center gap-4 p-1 px-2">
         <SmallButton text="Add to cart" flag="fill" onClick={addNewItem} />
         <SmallButton text="Buy now" onClick={handleBuyNow}/>
-        <div>love</div>
+        {/* <div>love</div> */}
       </div>
     </div>
   )
