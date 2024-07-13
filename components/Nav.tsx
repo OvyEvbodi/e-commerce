@@ -15,7 +15,7 @@ const Nav = () => {
       <div className="flex gap-6 flex-wrap items-center justify-between lg:w-1/2">
         <div className="flex gap-6">
           {/* <Link href="/" className="hover:opacity-80">Home</Link> */}
-          <Link href="products" className="hover:opacity-80">Products</Link>
+          <Link href="/products" className="hover:opacity-80">Products</Link>
         </div>
         <SearchBar /> 
       </div>

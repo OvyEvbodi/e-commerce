@@ -11,7 +11,7 @@ export default interface BigCardProps {
   quantity?: number;
 }
 export interface productCardProps {
-  id?: number;
+  id?: string;
   title: string;
   description: string;
   image: any[];
