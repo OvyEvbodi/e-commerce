@@ -15,14 +15,11 @@ interface AllProductsProps {
   apiResponse: productCardProps[];
 }
 
-
 const ProductsPagination: NextPage<any> = (apiResponse) => {
   const size = useSelector((state: RootState) => state.shop.size);
   const page = useSelector((state: RootState) => state.shop.page);
   const total = useSelector((state: RootState) => state.shop.total);
   const [ productSet, setProductsSet ] = useState<productCardProps[]>([]);
-  const start = (size * page) - size;
-  const end = ((size * page) - size) + size;
 
   const dispatch = useDispatch();
   const [index, setIndex] = useState(0);
@@ -39,25 +36,19 @@ const ProductsPagination: NextPage<any> = (apiResponse) => {
       id: item.id
     }
   })
-  console.log(page)
-  console.log(size)
-  console.log(total)
-
 
   const handlePagination = (page: number, idx: number) => {
     if ( page <= 0 ) return
-    if (page > total / size && page !== 1) return
+    if (page > Math.floor(total / size) && page !== 1) return
     setIndex(idx)
     dispatch(changePage(page))
-    setProductsSet(productList.slice(((size * page) - size), (((size * page) - size) + size)))
-
+    setProductsSet(productList.slice(Math.floor(((size * page) - size)), Math.floor((((size * page) - size) + size))));
   }
   useEffect( () => {
     dispatch(calculateTotal(apiResponse.total))
     handlePagination(1, 0)
     console.log(total)
     console.log(productSet)
-    // (size * page) - size (10 * 3) = 30 - 10 = 20
   }, [])
   
   return (
@@ -75,14 +66,14 @@ const ProductsPagination: NextPage<any> = (apiResponse) => {
         <ArrowButton text="<" type="button" flag="left" onClick={() => handlePagination(page - 1, index - 1)}/>
         <div className="flex gap-2 text-3xl">
           {
-            [...Array(total/size)].map((_, idx) => (
+            [...Array(Math.floor(total/size))].map((_, idx) => (
               idx === index ? <span className='text-orange cursor-pointer' key={idx}>&spades;</span> :
               <span className="cursor-pointer" onClick={() => handlePagination(idx + 1, idx)} key={idx}>&spades;</span>
             ))
           }
         </div>
         <ArrowButton text=">" type="button" flag="right" onClick={() => handlePagination(page + 1, index + 1)}/>
-        <p>Page {page} of { total / size }</p>
+        <p>Page {page} of { Math.floor(total / size) }</p>
       </div>
     </div>
   )

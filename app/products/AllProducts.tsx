@@ -30,10 +30,9 @@ const AllProducts = async () => {
   
 
   return (
-    <div className="p-4 md:pt-10 min-w-[100vw] lg:min-w-[72%] lg:w-[72%] lg:min-h-[100vh]">
+    <div className=" p-4 md:pt-10 min-w-[100vw] lg:min-w-[72%] lg:w-[72%] lg:min-h-[100vh]">
       <h4 className="text-[1.05rem] font-[500]"></h4>
       <ProductsPagination { ...apiResponse } />
-      
     </div>
   )
 };
