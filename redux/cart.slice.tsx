@@ -1,6 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
-import { RootState } from '@reduxjs/toolkit/query';
 import { productCardProps } from '@/interfaces/BigCardProps';
 
 const cart: productCardProps[] = [];
@@ -9,6 +8,8 @@ const cartSlice = createSlice({
   name: 'shop',
   initialState: {
     cart,
+    page: 1,
+    size: 2,
     total: 0
   },
   reducers: {
@@ -29,9 +30,12 @@ const cartSlice = createSlice({
         const index = state.cart.findIndex((item => item.id === action.payload.id));
         state.cart[index].quantity = state.cart[index].quantity! - 1;
       }
+    },
+    changePage: ( state, action ) => {
+      state.page = action.payload;
     }
   }
 });
 
 export default cartSlice.reducer;
-export const { addToCart, removeFromCart, increment, decrement } = cartSlice.actions;
+export const { addToCart, removeFromCart, increment, decrement, changePage } = cartSlice.actions;

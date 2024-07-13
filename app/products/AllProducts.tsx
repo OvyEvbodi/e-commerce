@@ -4,6 +4,7 @@ import { productCardProps } from "@/interfaces/BigCardProps";
 import axios from "axios";
 import ProductCard from "@/components/productCard";
 import ArrowButton from "@/components/ArrowButton";
+import Pagination from "@/components/Pagination";
 
 let size = 4;
 let page = 1;
@@ -15,8 +16,13 @@ let total = 0;
 const productUrl = `https://api.timbu.cloud/products?page=${page}&size=${size}&Appid=${appID}&Apikey=${apikey}&organization_id=${organizationID}`;
 
 const getProducts = async () => {
-  const { data, status } = await axios(productUrl)
-  return data
+  try {
+    const { data, status } = await axios(productUrl)
+    if (status === 200) return data
+  } catch (error: any) {
+    console.log(error)
+  }
+  
 };
 
 
@@ -49,13 +55,7 @@ const AllProducts = async () => {
           ))
         }
       </div>
-      <div className="flex gap-6">
-        <ArrowButton text="<" type="button" flag="left" />
-        <div>0 0 0</div>
-        <ArrowButton text=">" type="button" flag="right" />
-
-      </div>
-      <div>{total}</div>
+      <Pagination />
     </div>
   )
 };

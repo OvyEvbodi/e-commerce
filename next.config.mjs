@@ -1,5 +1,15 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'api.timbu.cloud',
+        port: '',
+        pathname: '/images/helendo/*'
+      }
+    ]
+  }
+};
 
 export default nextConfig;
-export const revalidate = 5;
