@@ -23,6 +23,7 @@ const Pagination = ( ) => {
     <ArrowButton text="<" type="button" flag="left" />
       
     <ArrowButton text=">" type="button" flag="right" onClick={() => handleChangePage(2)}/>
+    <p>{page}</p>
     </div>
   )
 };

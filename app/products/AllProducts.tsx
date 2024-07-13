@@ -4,8 +4,9 @@ import { productCardProps } from "@/interfaces/BigCardProps";
 import axios from "axios";
 import ProductCard from "@/components/productCard";
 import Pagination from "@/components/Pagination";
+import ProductsPagination from "@/app/products/ProductsPagination";
 
-let size = 4;
+let size = 30;
 let page = 1;
 const apikey = "a8e4e1fe190d4cdab5b445261358fbec20240712153100635723";
 const appID = "RTUGXRG9D1CCIM5";
@@ -23,12 +24,11 @@ const getProducts = async () => {
   
 };
 
-
 const AllProducts = async () => {
 
   const apiResponse = await getProducts();
   console.log( apiResponse )
-  const productList = apiResponse.items.map((item: any) => {
+  const productList = apiResponse && apiResponse.items.map((item: any) => {
     return {
       title: item.name,
       price: item.current_price[0].NGN[0],
@@ -44,16 +44,7 @@ const AllProducts = async () => {
   return (
     <div className="p-4 md:pt-10 min-w-[100vw] lg:min-w-[72%] lg:w-[72%] lg:min-h-[100vh]">
       <h4 className="text-[1.05rem] font-[500]"></h4>
-      <div className="flex flex-wrap gap-4 lg:gap-6 justify-center">
-        {
-          productList.map((item: productCardProps ) => (
-            <div key={item.id}>
-              <ProductCard { ...item } />
-              <p>{item.id}</p>
-            </div>
-          ))
-        }
-      </div>
+      <ProductsPagination prodList={ productList } />
       <Pagination />
     </div>
   )
