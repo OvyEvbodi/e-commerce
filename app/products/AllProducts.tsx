@@ -1,6 +1,6 @@
 // product listing paage
 
-import BigCardProps from "@/interfaces/BigCardProps";
+import { productCardProps } from "@/interfaces/BigCardProps";
 import axios from "axios";
 import ProductCard from "@/components/productCard";
 import ArrowButton from "@/components/ArrowButton";
@@ -42,7 +42,7 @@ const AllProducts = async () => {
       <h4 className="text-[1.05rem] font-[500]"></h4>
       <div className="flex flex-wrap gap-4 lg:gap-6 justify-center">
         {
-          productList.map((item: BigCardProps ) => (
+          productList.map((item: productCardProps ) => (
             <div key={item.id}>
               <ProductCard { ...item } />
             </div>

@@ -1,9 +1,9 @@
 import { createSlice } from '@reduxjs/toolkit';
 import type { PayloadAction } from '@reduxjs/toolkit';
 import { RootState } from '@reduxjs/toolkit/query';
-import BigCardProps from '@/interfaces/BigCardProps';
+import { productCardProps } from '@/interfaces/BigCardProps';
 
-const cart: BigCardProps[] = [];
+const cart: productCardProps[] = [];
 
 const cartSlice = createSlice({
   name: 'shop',

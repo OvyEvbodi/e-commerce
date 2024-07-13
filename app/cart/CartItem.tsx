@@ -5,11 +5,12 @@ import Image from "next/image";
 import { useSelector, useDispatch } from "react-redux";
 import { removeFromCart, increment, decrement } from "@/redux/cart.slice";
 import { RootState } from "@/redux/store";
-import BigCardProps from "@/interfaces/BigCardProps";
+import { productCardProps } from "@/interfaces/BigCardProps";
 
-const CartItem:NextPage<BigCardProps> = ({id, image, title, price, quantity }) => {
+const CartItem:NextPage<productCardProps> = ({id, image, title, price, quantity }) => {
   const total = useSelector((state: RootState) => state.shop.total);
   const storeCart = useSelector((state: RootState) => state.shop.cart);
+  const displayImage = image && image[0] ? `https://api.timbu.cloud/images/${image[0].url}` : "" ;
   const dispatch = useDispatch();
 
 
@@ -17,7 +18,7 @@ const CartItem:NextPage<BigCardProps> = ({id, image, title, price, quantity }) =
     <div className="py-4 flex flex-wrap items-center justify-between border-t">
       <div className="flex flex-col-reverse xl:flex-row flex-wrap lg:items-center justify-center gap-1 md:gap-4">
         <div className="">
-          <Image className="w-[80px] md:w-[100px]" src={image} width={100} height={100} alt={title} />
+          <Image className="w-[80px] md:w-[100px]" src={displayImage} width={100} height={100} alt={title} />
         </div>
         <h3 className="text-[0.7rem] md:text-[1.2rem]">{title}</h3>
       </div>

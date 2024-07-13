@@ -3,7 +3,7 @@
 
 import SmallButton from "@/components/SmallButton";
 import { NextPage } from "next";
-import BigCardProps from "@/interfaces/BigCardProps";
+import { productCardProps } from "@/interfaces/BigCardProps";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "@/redux/cart.slice";
 import Image from "next/image";
@@ -12,7 +12,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import { RootState } from "@/redux/store";
 
 
-const ProductCard: NextPage<BigCardProps> = ({id, title, image, label, price}) => {
+const ProductCard: NextPage<productCardProps> = ({id, title, image, label, price}) => {
 
   const displayImage: string = image && image[0] ? `https://api.timbu.cloud/images/${image[0].url}` : "" ;
   const dispatch = useDispatch();
@@ -56,9 +56,7 @@ const ProductCard: NextPage<BigCardProps> = ({id, title, image, label, price}) =
   return (
     <div className="w-[240px] md:w-[280px] lg:w-[320px] xl:w-[350px]">
       <div className="overflow-hidden ">
-        {/* <Image src={image[0].url} width={350} height={600} alt={label} /> */}
-        <img src={displayImage} className="h-full w-full"/>
-        <p>{image && image[0] && JSON.stringify(image[0].url)}</p>
+        <Image src={displayImage} width={350} height={600} alt={label} />
       </div>
       <div className="py-2 md:py-4 text-left]">
         <h5 className="text-[1.4rem] text-grey-text font-[400] leading-8">{title}</h5>
