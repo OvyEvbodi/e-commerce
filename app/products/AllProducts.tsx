@@ -6,8 +6,8 @@ import ProductCard from "@/components/productCard";
 import Pagination from "@/components/Pagination";
 import ProductsPagination from "@/app/products/ProductsPagination";
 
-let size = 30;
-let page = 1;
+const size = 30;
+const page = 1;
 const apikey = "a8e4e1fe190d4cdab5b445261358fbec20240712153100635723";
 const appID = "RTUGXRG9D1CCIM5";
 const organizationID = "82a6b31709ee4b4f96d04a3dacf37b27";
@@ -21,31 +21,19 @@ const getProducts = async () => {
   } catch (error: any) {
     console.log(error)
   }
-  
 };
 
 const AllProducts = async () => {
 
   const apiResponse = await getProducts();
   console.log( apiResponse )
-  const productList = apiResponse && apiResponse.items.map((item: any) => {
-    return {
-      title: item.name,
-      price: item.current_price[0].NGN[0],
-      description: item.description,
-      category: item.category,
-      quantity: item.available_quantity,
-      image: item.photos,
-      label: item.name,
-      id: item.id
-    }
-  })
+  
 
   return (
     <div className="p-4 md:pt-10 min-w-[100vw] lg:min-w-[72%] lg:w-[72%] lg:min-h-[100vh]">
       <h4 className="text-[1.05rem] font-[500]"></h4>
-      <ProductsPagination prodList={ productList } />
-      <Pagination />
+      <ProductsPagination { ...apiResponse } />
+      
     </div>
   )
 };

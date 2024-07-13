@@ -33,9 +33,12 @@ const cartSlice = createSlice({
     },
     changePage: ( state, action ) => {
       state.page = action.payload;
+    },
+    calculateTotal: ( state, action ) => {
+      state.total = action.payload;
     }
   }
 });
 
 export default cartSlice.reducer;
-export const { addToCart, removeFromCart, increment, decrement, changePage } = cartSlice.actions;
+export const { addToCart, removeFromCart, increment, decrement, changePage, calculateTotal } = cartSlice.actions;
