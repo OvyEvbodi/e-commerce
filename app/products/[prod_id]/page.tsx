@@ -3,7 +3,7 @@ import { productCardProps } from "@/interfaces/BigCardProps";
 import axios from "axios";
 import ProdDescription from "@/app/products/ProdDescription";
 import ProdSummary, { ProductSummaryProps } from "@/app/products/ProdSummary";
-import ProdGallery from "@/app/products/ProdImgGallery";
+import ProdGallery, { ProdGalleryProps }  from "@/app/products/ProdImgGallery";
 import { ToastContainer } from 'react-toastify';
 import Link from "next/link";
 
@@ -25,7 +25,7 @@ const ProductDetails = async ( {params} : {params: {prod_id: string} } ) => {
   };
 
   const apiResponse = await getProduct();
-  console.log( apiResponse )
+  // console.log( apiResponse )
 
   const summaryData: ProductSummaryProps = apiResponse && {
     id: apiResponse.id,
@@ -39,7 +39,11 @@ const ProductDetails = async ( {params} : {params: {prod_id: string} } ) => {
     quantity: apiResponse.available_quantity,
     code: apiResponse.unique_id,
     image: apiResponse.photos
-  }
+  };
+
+  const galleryData: ProdGalleryProps = apiResponse && {
+    images: apiResponse.photos
+  };
 
 
   return (
@@ -50,7 +54,7 @@ const ProductDetails = async ( {params} : {params: {prod_id: string} } ) => {
       </div>
       <div className="flex flex-col gap-8 p-6 lg:p-12 lg:max-w-[90vw] ">
         <div className="flex flex-wrap gap-4 justify-center">
-          <ProdGallery />
+          <ProdGallery { ...galleryData } />
           <ProdSummary { ...summaryData }/>
         </div>
         <ProdDescription />

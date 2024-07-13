@@ -283,3 +283,31 @@ body {
   -ms-transform: rotate(45deg);
   transform: rotate(45deg);
 }
+
+/* ------------ image slider on products details page */
+
+.control {
+  position: absolute;
+  width: 45px;
+  height:45px;
+  background-color: var(--orange);
+  border-radius: 50%;
+  /* display: none; */
+  opacity: 0;
+  transition: all 500ms ease-in-out;
+  color: var(--white);
+}
+.control:hover {
+  /* display: block; */
+  opacity: 1;
+}
+.left {
+  left:1rem;
+}
+.right {
+  right:1rem;
+}
+.img_wrap:hover ~ .control {
+  /* display: block; */
+  opacity: 1;
+}

@@ -9,7 +9,7 @@ const cartSlice = createSlice({
   initialState: {
     cart,
     page: 1,
-    size: 4,
+    size: 10,
     total: 0
   },
   reducers: {
