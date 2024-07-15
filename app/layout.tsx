@@ -5,7 +5,8 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 import Nav from "@/components/Nav";
 import { Provider } from "react-redux";
-import { store } from "@/redux/store";
+import { store, persistor } from "@/redux/store";
+import { PersistGate } from 'redux-persist/integration/react';
 
 const ElMessiri = El_Messiri({ subsets: ["latin"] });
 
@@ -22,11 +23,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Provider store={store}>
-        <body className={ElMessiri.className}>
-          <Nav />
-          {children}
-          <Footer />
-        </body>
+        <PersistGate loading={null} persistor={persistor}>
+          <body className={ElMessiri.className}>
+            <Nav />
+            {children}
+            <Footer />
+          </body>
+        </PersistGate>
       </Provider>
     </html>
   );
