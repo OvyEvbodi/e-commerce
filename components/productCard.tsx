@@ -11,6 +11,7 @@ import { Slide, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { RootState } from "@/redux/store";
 import Link from "next/link";
+import { useState } from "react";
 
 
 const ProductCard: NextPage<productCardProps> = ({id, title, image, label, price}) => {
@@ -18,12 +19,18 @@ const ProductCard: NextPage<productCardProps> = ({id, title, image, label, price
   const displayImage: string = image && image[0] ? `https://api.timbu.cloud/images/${image[0].url}` : "" ;
   const dispatch = useDispatch();
   const storeCart = useSelector((state: RootState) => state.shop.cart);
+  const [ viewCart, setViewCart ] = useState(false);
+  const cartTimeOut = () => {
+    setTimeout(() => {setViewCart(false)}, 3000)
+  };
+
 
   const addNewItem = () => {
     
     const index = storeCart.findIndex((item => id === item.id));
 
     if (index === -1) {
+      setViewCart(true)
       dispatch(addToCart({id, title, price, quantity: 1, image}))
       toast.success('Item added to cart',  {
         position: "top-center",
@@ -36,6 +43,7 @@ const ProductCard: NextPage<productCardProps> = ({id, title, image, label, price
         theme: "light",
         transition: Slide,
         })
+        cartTimeOut()
     } else {
       console.log('item already in cart!')
       console.log(index)
@@ -69,6 +77,7 @@ const ProductCard: NextPage<productCardProps> = ({id, title, image, label, price
           <span className="font-bold text-[1.4rem]">${price}</span>
           <span className="text-[0.7rem] line-through">${price}</span>
         </div>
+        { viewCart && <Link href='/cart' className='text-xs p-2 text-gray-500 underline hover:text-accent/80 duration-300 block'>View cart</Link>}
         <SmallButton text='Add to cart' onClick={addNewItem}/>
       </div>
     </div>
