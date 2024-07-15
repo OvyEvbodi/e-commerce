@@ -44,7 +44,7 @@ const ProdGallery: NextPage<ProdGalleryProps> = ({ images }) => {
         <div className="flex gap-2 text-3xl">
           {
             [...Array(images.length)].map((_, idx) => (
-              idx === index ? <span className='text-red-600 cursor-pointer' key={idx}>&spades;</span> :
+              idx === index ? <span className='text-orange cursor-pointer' key={idx}>&spades;</span> :
               <span className="cursor-pointer" onClick={() => setIndex(idx)}  key={idx}>&spades;</span>
             ))
           }

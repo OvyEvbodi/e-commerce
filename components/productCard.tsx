@@ -19,45 +19,59 @@ const ProductCard: NextPage<productCardProps> = ({id, title, image, label, price
   const displayImage: string = image && image[0] ? `https://api.timbu.cloud/images/${image[0].url}` : "" ;
   const dispatch = useDispatch();
   const storeCart = useSelector((state: RootState) => state.shop.cart);
+  const shopList = useSelector((state: RootState) => state.shop.products);
   const [ viewCart, setViewCart ] = useState(false);
   const cartTimeOut = () => {
     setTimeout(() => {setViewCart(false)}, 3000)
   };
 
-
   const addNewItem = () => {
-    
-    const index = storeCart.findIndex((item => id === item.id));
 
-    if (index === -1) {
-      setViewCart(true)
-      dispatch(addToCart({id, title, price, quantity: 1, image}))
-      toast.success('Item added to cart',  {
+    const index = storeCart.findIndex((item => id === item.id));
+    const shopIndex = shopList.findIndex((item => id === item.id));
+    console.log(id)
+
+
+    if (shopList[shopIndex].quantity === 0) {
+      toast.info('We hate that you missed this product, we should restock soon.', {
         position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: true,
+        autoClose: 6000,
+        hideProgressBar: false,
         closeOnClick: true,
         pauseOnHover: true,
         draggable: true,
         progress: undefined,
-        theme: "light",
-        transition: Slide,
-        })
-        cartTimeOut()
+        theme: "colored",
+      })
+    } else if (index === -1) {
+    setViewCart(true)
+    dispatch(addToCart({id, title, price, quantity: 1, image}))
+    toast.success('Item added to cart',  {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Slide,
+      })
+    cartTimeOut()
     } else {
-      console.log('item already in cart!')
-      console.log(index)
-      toast.error("You've already picked this",  {
-        position: "top-center",
-        autoClose: 5000,
-        hideProgressBar: true,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "light",
-        transition: Slide,
-        })
+    console.log('item already in cart!')
+    console.log(index)
+    toast.error("You've already picked this",  {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: true,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+      transition: Slide,
+      })
     }
 
   };

@@ -5,11 +5,9 @@ import SmallButton from "@/components/SmallButton";
 import { NextPage } from "next";
 import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "@/redux/cart.slice";
-import Image from "next/image";
 import { Slide, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { RootState } from "@/redux/store";
-import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 export interface ProductSummaryProps {
@@ -27,44 +25,55 @@ export interface ProductSummaryProps {
 }
 
 const ProdSummary:NextPage<ProductSummaryProps> = (props) => {
-
   const router = useRouter();
   const dispatch = useDispatch();
   const storeCart = useSelector((state: RootState) => state.shop.cart);
+  const shopList = useSelector((state: RootState) => state.shop.products);
 
   const addNewItem = () => {
-    
-  const index = storeCart.findIndex((item => props.id === item.id));
-  if (index === -1) {
-    dispatch(addToCart({id: props.id, title: props.title, price: props.price, quantity: 1, image: props.image}))
-    toast.success('Item added to cart',  {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Slide,
-      })
-  } else {
-    console.log('item already in cart!')
-    // console.log(index)
-    toast.error("You've already picked this",  {
-      position: "top-center",
-      autoClose: 5000,
-      hideProgressBar: true,
-      closeOnClick: true,
-      pauseOnHover: true,
-      draggable: true,
-      progress: undefined,
-      theme: "light",
-      transition: Slide,
-      })
-  }
+    const index = storeCart.findIndex((item => props.id === item.id));
+    const shopIndex = shopList.findIndex((item => props.id === item.id));
 
-};
+    if (shopList[shopIndex].quantity === 0) {
+      toast.info('We hate that you missed this product, we should restock soon.', {
+        position: "top-center",
+        autoClose: 6000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      })
+    } else if (index === -1) {
+      dispatch(addToCart({id: props.id, title: props.title, price: props.price, quantity: 1, image: props.image}))
+      toast.success('Item added to cart',  {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+        })
+    } else {
+      console.log('item already in cart!')
+      // console.log(index)
+      toast.error("You've already picked this",  {
+        position: "top-center",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "light",
+        transition: Slide,
+        })
+    }
+  };
 
   const handleBuyNow = () => {
     addNewItem();
@@ -88,7 +97,12 @@ const ProdSummary:NextPage<ProductSummaryProps> = (props) => {
         </div>
         <div className="flex gap-2">
           <p>Product code: {props.code}</p>
-          <p className="bg-grey-bg rounded-[8px] px-4">In stock: {JSON.stringify(props.inStock)}</p>
+          {
+            (props.quantity > 0) ?
+            <p className="bg-grey-bg rounded-[8px] px-4">In stock</p> :
+            <p className="bg-orange rounded-[8px] px-4 text-white">Out of stock</p>
+          }
+          
         </div>
         <div  className="flex gap-2">
           {/* <p>something here</p> */}

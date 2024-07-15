@@ -3,10 +3,12 @@ import type { PayloadAction } from '@reduxjs/toolkit';
 import { productCardProps } from '@/interfaces/BigCardProps';
 
 const cart: productCardProps[] = [];
+const products: productCardProps[] = [];
 
 const cartSlice = createSlice({
   name: 'shop',
   initialState: {
+    products,
     cart,
     page: 1,
     size: 10,
@@ -39,9 +41,12 @@ const cartSlice = createSlice({
     },
     calculateTotal: ( state, action ) => {
       state.total = action.payload;
+    },
+    updateProducts: ( state, action ) => {
+      state.products = action.payload;
     }
   }
 });
 
 export default cartSlice.reducer;
-export const { addToCart, removeFromCart, clearCart, increment, decrement, changePage, calculateTotal } = cartSlice.actions;
+export const { addToCart, removeFromCart, clearCart, increment, decrement, changePage, calculateTotal, updateProducts } = cartSlice.actions;
