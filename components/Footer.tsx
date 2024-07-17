@@ -1,12 +1,14 @@
 // Footer
 import Image from "next/image";
+import SubscribeForm from "@/components/SubscribeForm";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <div>
       <div id="footer" className="bg-light-green p-4 px-6 lg:px-12 lg:min-h-[30vh] flex flex-wrap justify-center gap-4 end">
         <div className="lg:w-[18vw]">
-          <h5 className="md:font-[600] md:tracking-wider uppercase text-green text-[2.1rem]">Helendo<span className="text-[1rem] capitalize">Store</span></h5>
+          <h5 className="md:font-[600] md:tracking-wider uppercase text-green text-[2.1rem]"><Link href="/">Helendo<span className="text-[1rem] capitalize">Store</span></Link></h5>
           <p className="text-[0.9rem]">evbodiovo@gmail.com</p>
           <div className="flex mt-2 gap-2">
             <Image src='/linkedin.png' width={40} height={40} alt="Linkedin logo"/>
@@ -46,12 +48,7 @@ const Footer = () => {
           </div>
           <div className="lg:w-[22vw] ">
           <h6 className="mb-4">Newsletter</h6>
-          <div >
-            <input className="py-3 text-[0.8rem] bg-grey-bg  pl-4 rounded-[6px]" type="text" placeholder="your email" />
-            <button className=" py-2 px-6 text-sm hover:text-green rounded-[6px] border border-4 border-green hover:bg-white bg-green text-white transition-all duration-300">
-              Subscribe
-            </button>
-          </div>
+          <SubscribeForm />
         </div>
         </div>
       </div>
