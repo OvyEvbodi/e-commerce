@@ -18,7 +18,8 @@ const TrendingCard: NextPage<BigCardProps> = ({id, title, image, label, price}) 
       <div className="p-2 md:p-4 text-left w-full lg:min-h-[20vh]">
         <h5 className="text-[1.05rem] text-grey-text leading-8">{title}</h5>
         <p className="font-bold text-[1.4rem]"><span>$</span>{price}</p>
-        <SmallButton text='Add to cart' onClick={() => dispatch(addToCart({id, title, price, quantity: 1, image}))}/>
+        {/* <SmallButton text='Add to cart' onClick={() => dispatch(addToCart({id, title, price, quantity: 1, image}))}/> */}
+        <SmallButton text='Please check back' disabled={true} />
       </div>
     </div>
   )

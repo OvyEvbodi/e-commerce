@@ -41,7 +41,6 @@ const ProductsPagination: NextPage<any> = (apiResponse) => {
     }
   })
 
-
   const handlePagination = (page: number, idx: number) => {
     if ( page <= 0 ) return
     if (page > Math.floor(total / size) && page !== 1) return

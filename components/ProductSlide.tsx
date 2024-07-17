@@ -1,5 +1,4 @@
 // Categories
-import { cart_page_cards } from "@/api/data.json";
 import ArrowButton from "@/components/ArrowButton";
 import ProductCard from "@/components/productCard";
 import { productCardProps } from "@/interfaces/BigCardProps";
